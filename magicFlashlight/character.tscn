@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://djfcyfi7a5yn0"]
+
+[ext_resource type="Texture2D" uid="uid://d0mg374mdirok" path="res://hooded figure asset pack/hooded figure asset pack/idle.png" id="1_glpr6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vu45j"]
+
+[node name="Character" type="CharacterBody2D" unique_id=865322138]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=702880591]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_vu45j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=937906235]
+texture = ExtResource("1_glpr6")
