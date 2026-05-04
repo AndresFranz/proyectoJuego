@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://clmrs3an4xda6"]
+
+[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_hx8vk"]
+[ext_resource type="Script" uid="uid://ck5qvuh76y62m" path="res://flashlight/linterna/linternaScript.gd" id="1_jlm58"]
+
+[sub_resource type="Gradient" id="Gradient_jlm58"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j0232"]
+gradient = SubResource("Gradient_jlm58")
+fill = 1
+fill_from = Vector2(1, 0.51171875)
+fill_to = Vector2(0, 0.55078125)
+
+[node name="LinternaObject" type="Node2D" unique_id=786015511]
+script = ExtResource("1_jlm58")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1296824987]
+position = Vector2(-16, -1)
+scale = Vector2(0.2421875, 0.11328125)
+texture = ExtResource("1_hx8vk")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=834511003]
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1938941955]
+polygon = PackedVector2Array(0, 0, 188, 46, 187, -41)
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1410871625]
+position = Vector2(16.000002, -32)
+scale = Vector2(2.9375, 1.375)
+energy = 1.97
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_j0232")
+offset = Vector2(27, 27)
+metadata/_edit_lock_ = true
