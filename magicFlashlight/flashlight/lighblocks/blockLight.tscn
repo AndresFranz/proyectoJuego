@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://besiwxp7w7qtf"]
+
+[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_cmgkr"]
+[ext_resource type="Script" uid="uid://c7l2fgokxyqqf" path="res://flashlight/lighblocks/block_light.gd" id="1_ntsx2"]
+[ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://flashlight/lighblocks/area_light.gd" id="3_gg22g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gthl"]
+size = Vector2(143, 139)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivs8f"]
+size = Vector2(143, 139)
+
+[node name="bloque_light" type="StaticBody2D" unique_id=618643777]
+script = ExtResource("1_ntsx2")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1485804684]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(1, 4.7683716e-07)
+scale = Vector2(1.1328125, 1.0859375)
+texture = ExtResource("1_cmgkr")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1845245414]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_8gthl")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1679588250]
+script = ExtResource("3_gg22g")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1274387776]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_ivs8f")

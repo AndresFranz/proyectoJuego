@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cqumcedtcqtgm"]
+
+[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_iput8"]
+[ext_resource type="Script" uid="uid://bcyhh0vojqckj" path="res://characterScript.gd" id="2_2c8j4"]
+[ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://flashlight/linterna/linternaObject.tscn" id="3_2c8j4"]
+[ext_resource type="Script" uid="uid://c7l2fgokxyqqf" path="res://flashlight/lighblocks/block_light.gd" id="4_tk6jg"]
+[ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://flashlight/lighblocks/area_light.gd" id="5_x0dh1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mudj"]
+size = Vector2(685, 122)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tk6jg"]
+radius = 29.0
+height = 60.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x0dh1"]
+load_path = "res://.godot/imported/jump.png-ea68b7545978b07dda59e3eb60b445a2.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2c8j4"]
+size = Vector2(268, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lobsm"]
+size = Vector2(264, 114)
+
+[node name="Node2D" type="Node2D" unique_id=1300639145]
+metadata/_edit_lock_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=304522232]
+color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=426880829]
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=606621498]
+position = Vector2(-4.7683716e-07, 209)
+scale = Vector2(5.3984375, 1)
+texture = ExtResource("1_iput8")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1158671027]
+position = Vector2(-0.5, 206)
+shape = SubResource("RectangleShape2D_6mudj")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=279620953]
+metadata/_edit_lock_ = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1409894524]
+script = ExtResource("2_2c8j4")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1682412235]
+shape = SubResource("CapsuleShape2D_tk6jg")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=412147475]
+position = Vector2(-1.0000038, 1.9999962)
+scale = Vector2(3.8124998, 3.472222)
+texture = SubResource("CompressedTexture2D_x0dh1")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="LinternaObject" parent="CharacterBody2D" unique_id=786015511 instance=ExtResource("3_2c8j4")]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=326889843]
+script = ExtResource("4_tk6jg")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1440055891]
+position = Vector2(196, 79)
+scale = Vector2(2.09375, 1)
+texture = ExtResource("1_iput8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1171248556]
+position = Vector2(196, 73)
+shape = SubResource("RectangleShape2D_2c8j4")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D2" unique_id=133463852]
+script = ExtResource("5_x0dh1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/Area2D" unique_id=1616111784]
+position = Vector2(196, 73)
+shape = SubResource("RectangleShape2D_lobsm")
