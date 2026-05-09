@@ -47,6 +47,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1409894524]
+collision_mask = 4
 script = ExtResource("2_2c8j4")
 metadata/_edit_lock_ = true
 
@@ -64,6 +65,7 @@ metadata/_edit_lock_ = true
 [node name="LinternaObject" parent="CharacterBody2D" unique_id=786015511 instance=ExtResource("3_2c8j4")]
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=326889843]
+light_mask = 4
 script = ExtResource("4_tk6jg")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1440055891]
@@ -76,6 +78,8 @@ position = Vector2(196, 73)
 shape = SubResource("RectangleShape2D_2c8j4")
 
 [node name="Area2D" type="Area2D" parent="StaticBody2D2" unique_id=133463852]
+light_mask = 4
+visibility_layer = 2
 script = ExtResource("5_x0dh1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/Area2D" unique_id=1616111784]

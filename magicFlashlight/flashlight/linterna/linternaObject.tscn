@@ -22,6 +22,8 @@ texture = ExtResource("1_hx8vk")
 metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=834511003]
+light_mask = 2
+visibility_layer = 4
 metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1938941955]

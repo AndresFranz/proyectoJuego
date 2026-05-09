@@ -9,8 +9,6 @@ func _ready() -> void:
 	Area.monitorable = false
 	Area.monitoring = false 
 
-	pass # Replace with function body.
-
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("turn_on_off"):
 		Light.visible = not Light.visible
