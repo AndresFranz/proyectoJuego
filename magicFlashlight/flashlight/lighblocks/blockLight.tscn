@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_cmgkr"]
 [ext_resource type="Script" uid="uid://c7l2fgokxyqqf" path="res://flashlight/lighblocks/block_light.gd" id="1_ntsx2"]
 [ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://flashlight/lighblocks/area_light.gd" id="3_gg22g"]
+[ext_resource type="Script" uid="uid://2iw6mx0i5bxu" path="res://components/hitbox.gd" id="4_gg22g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gthl"]
 size = Vector2(143, 139)
@@ -10,7 +11,11 @@ size = Vector2(143, 139)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivs8f"]
 size = Vector2(143, 139)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_514gm"]
+size = Vector2(140, 137)
+
 [node name="bloque_light" type="StaticBody2D" unique_id=618643777]
+collision_layer = 2
 script = ExtResource("1_ntsx2")
 metadata/_edit_lock_ = true
 
@@ -26,10 +31,19 @@ position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_8gthl")
 metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1679588250]
+[node name="areaLuz" type="Area2D" parent="." unique_id=1679588250]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("3_gg22g")
 metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1274387776]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areaLuz" unique_id=1274387776]
 position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_ivs8f")
+
+[node name="areaKill" type="Area2D" parent="." unique_id=1843158877]
+script = ExtResource("4_gg22g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areaKill" unique_id=1920371679]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_514gm")
