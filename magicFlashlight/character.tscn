@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://djfcyfi7a5yn0"]
+ [gd_scene format=3 uid="uid://djfcyfi7a5yn0"]
 
 [ext_resource type="Texture2D" uid="uid://d0mg374mdirok" path="res://hooded figure asset pack/hooded figure asset pack/idle.png" id="1_glpr6"]
 [ext_resource type="Script" uid="uid://c72ydci0npyev" path="res://character.gd" id="1_wa5vi"]
