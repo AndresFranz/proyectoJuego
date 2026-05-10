@@ -1,57 +1,56 @@
 [gd_scene format=3 uid="uid://cqumcedtcqtgm"]
 
 [ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_iput8"]
+[ext_resource type="Script" uid="uid://c3nl31saw4cn3" path="res://components/mainScript.gd" id="1_lobsm"]
 [ext_resource type="Script" uid="uid://bcyhh0vojqckj" path="res://characterScript.gd" id="2_2c8j4"]
 [ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://flashlight/linterna/linternaObject.tscn" id="3_2c8j4"]
 [ext_resource type="Script" uid="uid://c7l2fgokxyqqf" path="res://flashlight/lighblocks/block_light.gd" id="4_tk6jg"]
+[ext_resource type="Script" uid="uid://bxaush0av8s31" path="res://components/heartbox.gd" id="4_x0dh1"]
 [ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://flashlight/lighblocks/area_light.gd" id="5_x0dh1"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mudj"]
-size = Vector2(685, 122)
+[ext_resource type="Script" uid="uid://2iw6mx0i5bxu" path="res://components/hitbox.gd" id="7_lobsm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tk6jg"]
-radius = 29.0
-height = 60.0
+radius = 32.0
+height = 72.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x0dh1"]
 load_path = "res://.godot/imported/jump.png-ea68b7545978b07dda59e3eb60b445a2.ctex"
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lobsm"]
+radius = 26.0
+height = 60.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2c8j4"]
-size = Vector2(268, 127)
+size = Vector2(268, 118.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lobsm"]
-size = Vector2(264, 114)
+size = Vector2(226, 89)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3n7q"]
+size = Vector2(241, 119)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mudj"]
+size = Vector2(674, 102)
 
 [node name="Node2D" type="Node2D" unique_id=1300639145]
+script = ExtResource("1_lobsm")
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=304522232]
 color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 metadata/_edit_lock_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=426880829]
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=606621498]
-position = Vector2(-4.7683716e-07, 209)
-scale = Vector2(5.3984375, 1)
-texture = ExtResource("1_iput8")
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1158671027]
-position = Vector2(-0.5, 206)
-shape = SubResource("RectangleShape2D_6mudj")
-metadata/_edit_lock_ = true
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=279620953]
 metadata/_edit_lock_ = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1409894524]
+position = Vector2(-473, 11)
 collision_mask = 4
 script = ExtResource("2_2c8j4")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1682412235]
+position = Vector2(-3, 2)
 shape = SubResource("CapsuleShape2D_tk6jg")
 metadata/_edit_lock_ = true
 
@@ -64,24 +63,113 @@ metadata/_edit_lock_ = true
 
 [node name="LinternaObject" parent="CharacterBody2D" unique_id=786015511 instance=ExtResource("3_2c8j4")]
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=326889843]
+[node name="heartbox" type="Area2D" parent="CharacterBody2D" unique_id=251557849 node_paths=PackedStringArray("character_body_2d")]
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("4_x0dh1")
+character_body_2d = NodePath("..")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/heartbox" unique_id=18223744]
+position = Vector2(-2, 2)
+shape = SubResource("CapsuleShape2D_lobsm")
+metadata/_edit_lock_ = true
+
+[node name="bloque_luz" type="StaticBody2D" parent="." unique_id=326889843]
 light_mask = 4
+position = Vector2(-333, 22)
+collision_layer = 4
 script = ExtResource("4_tk6jg")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=1440055891]
+[node name="Sprite2D" type="Sprite2D" parent="bloque_luz" unique_id=1440055891]
 position = Vector2(196, 79)
 scale = Vector2(2.09375, 1)
 texture = ExtResource("1_iput8")
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1171248556]
-position = Vector2(196, 73)
+[node name="colisionPared" type="CollisionShape2D" parent="bloque_luz" unique_id=1171248556]
+position = Vector2(196, 77.25)
 shape = SubResource("RectangleShape2D_2c8j4")
+metadata/_edit_lock_ = true
 
-[node name="Area2D" type="Area2D" parent="StaticBody2D2" unique_id=133463852]
+[node name="Area2D" type="Area2D" parent="bloque_luz" unique_id=133463852]
 light_mask = 4
 visibility_layer = 2
+position = Vector2(-241, 23)
+collision_layer = 8
+collision_mask = 2
 script = ExtResource("5_x0dh1")
+metadata/_edit_lock_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/Area2D" unique_id=1616111784]
-position = Vector2(196, 73)
+[node name="colisionKill" type="CollisionShape2D" parent="bloque_luz/Area2D" unique_id=1616111784]
+position = Vector2(435, 72)
 shape = SubResource("RectangleShape2D_lobsm")
+metadata/_edit_lock_ = true
+
+[node name="areaKill" type="Area2D" parent="bloque_luz" unique_id=86472230]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("7_lobsm")
+metadata/_edit_lock_ = true
+
+[node name="trueKillCollision" type="CollisionShape2D" parent="bloque_luz/areaKill" unique_id=233810577]
+position = Vector2(210.5, 78.5)
+shape = SubResource("RectangleShape2D_x3n7q")
+metadata/_edit_lock_ = true
+
+[node name="suelo" type="StaticBody2D" parent="." unique_id=426880829]
+position = Vector2(-208, 20)
+collision_layer = 4
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="suelo" unique_id=606621498]
+position = Vector2(-4.7683716e-07, 209)
+scale = Vector2(5.3984375, 1)
+texture = ExtResource("1_iput8")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo" unique_id=1158671027]
+position = Vector2(-1, 212)
+shape = SubResource("RectangleShape2D_6mudj")
+
+[node name="bloque_luz2" type="StaticBody2D" parent="." unique_id=1992365676]
+light_mask = 4
+position = Vector2(90, 144)
+collision_layer = 4
+script = ExtResource("4_tk6jg")
+
+[node name="Sprite2D" type="Sprite2D" parent="bloque_luz2" unique_id=1944977854]
+position = Vector2(196, 79)
+scale = Vector2(2.09375, 1)
+texture = ExtResource("1_iput8")
+metadata/_edit_lock_ = true
+
+[node name="colisionPared" type="CollisionShape2D" parent="bloque_luz2" unique_id=2068342782]
+position = Vector2(196, 77.25)
+shape = SubResource("RectangleShape2D_2c8j4")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="bloque_luz2" unique_id=2029583287]
+light_mask = 4
+visibility_layer = 2
+position = Vector2(-241, 23)
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("5_x0dh1")
+metadata/_edit_lock_ = true
+
+[node name="colisionKill" type="CollisionShape2D" parent="bloque_luz2/Area2D" unique_id=823076346]
+position = Vector2(435, 72)
+shape = SubResource("RectangleShape2D_lobsm")
+metadata/_edit_lock_ = true
+
+[node name="areaKill" type="Area2D" parent="bloque_luz2" unique_id=1783568499]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("7_lobsm")
+metadata/_edit_lock_ = true
+
+[node name="trueKillCollision" type="CollisionShape2D" parent="bloque_luz2/areaKill" unique_id=1309417542]
+position = Vector2(210.5, 78.5)
+shape = SubResource("RectangleShape2D_x3n7q")
+metadata/_edit_lock_ = true
