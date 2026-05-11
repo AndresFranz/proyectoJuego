@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ea6fuc72iqeg"]
 
 [ext_resource type="Script" uid="uid://c7l2fgokxyqqf" path="res://Blocks/LightBlock/block_light.gd" id="1_t1l2x"]
-[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="2_kjfiy"]
 [ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://Blocks/LightBlock/area_light.gd" id="3_n3076"]
 [ext_resource type="Script" uid="uid://2iw6mx0i5bxu" path="res://components/hitbox.gd" id="4_udpu7"]
 
@@ -18,12 +17,6 @@ size = Vector2(225, 109.25)
 light_mask = 4
 collision_layer = 4
 script = ExtResource("1_t1l2x")
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1493733076]
-position = Vector2(-1, 0)
-scale = Vector2(2.09375, 1)
-texture = ExtResource("2_kjfiy")
 metadata/_edit_lock_ = true
 
 [node name="collisionWall" type="CollisionShape2D" parent="." unique_id=1459159722]

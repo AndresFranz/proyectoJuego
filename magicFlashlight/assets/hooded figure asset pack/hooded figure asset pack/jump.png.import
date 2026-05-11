@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy67xunapei8"
-path="res://.godot/imported/fall.png-d3c35ccd508af527843aa370bd692ca1.ctex"
+uid="uid://b6jsxutvfk0sp"
+path="res://.godot/imported/jump.png-a5b358021f1e5e3925c8f697a1f2ec90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hooded figure asset pack/hooded figure asset pack/fall.png"
-dest_files=["res://.godot/imported/fall.png-d3c35ccd508af527843aa370bd692ca1.ctex"]
+source_file="res://assets/hooded figure asset pack/hooded figure asset pack/jump.png"
+dest_files=["res://.godot/imported/jump.png-a5b358021f1e5e3925c8f697a1f2ec90.ctex"]
 
 [params]
 

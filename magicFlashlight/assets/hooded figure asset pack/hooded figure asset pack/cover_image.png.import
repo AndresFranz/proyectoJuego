@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcnwmvnaswbm1"
-path="res://.godot/imported/cover_image.png-8fdb5619d3a3c34d99581762e0bd9282.ctex"
+path="res://.godot/imported/cover_image.png-37ce260a06affb2c168c89545409651f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hooded figure asset pack/hooded figure asset pack/cover_image.png"
-dest_files=["res://.godot/imported/cover_image.png-8fdb5619d3a3c34d99581762e0bd9282.ctex"]
+source_file="res://assets/hooded figure asset pack/hooded figure asset pack/cover_image.png"
+dest_files=["res://.godot/imported/cover_image.png-37ce260a06affb2c168c89545409651f.ctex"]
 
 [params]
 

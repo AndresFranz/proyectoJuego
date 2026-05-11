@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dprqwxmv7wc4q"
-path="res://.godot/imported/run.png-a46cfef4207ffc726bdb7e31019d30f1.ctex"
+uid="uid://d0mg374mdirok"
+path="res://.godot/imported/idle.png-2840952d3a144d6a60491aa257064916.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hooded figure asset pack/hooded figure asset pack/run.png"
-dest_files=["res://.godot/imported/run.png-a46cfef4207ffc726bdb7e31019d30f1.ctex"]
+source_file="res://assets/hooded figure asset pack/hooded figure asset pack/idle.png"
+dest_files=["res://.godot/imported/idle.png-2840952d3a144d6a60491aa257064916.ctex"]
 
 [params]
 
