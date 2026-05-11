@@ -3,10 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_iput8"]
 [ext_resource type="Script" uid="uid://c3nl31saw4cn3" path="res://components/mainScript.gd" id="1_lobsm"]
 [ext_resource type="Script" uid="uid://bcyhh0vojqckj" path="res://characterScript.gd" id="2_2c8j4"]
-[ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://flashlight/linterna/linternaObject.tscn" id="3_2c8j4"]
-[ext_resource type="Script" uid="uid://c7l2fgokxyqqf" path="res://flashlight/lighblocks/block_light.gd" id="4_tk6jg"]
+[ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://Flashlight/FlashLight.tscn" id="3_2c8j4"]
+[ext_resource type="Script" uid="uid://c7l2fgokxyqqf" path="res://Blocks/LightBlock/block_light.gd" id="4_tk6jg"]
 [ext_resource type="Script" uid="uid://bxaush0av8s31" path="res://components/heartbox.gd" id="4_x0dh1"]
-[ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://flashlight/lighblocks/area_light.gd" id="5_x0dh1"]
+[ext_resource type="PackedScene" uid="uid://ea6fuc72iqeg" path="res://Blocks/LightBlock/LightBlock.tscn" id="5_khhis"]
+[ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://Blocks/LightBlock/area_light.gd" id="5_x0dh1"]
+[ext_resource type="PackedScene" uid="uid://ddiooufww1qj7" path="res://Blocks/Floor/Floor.tscn" id="6_hdkg3"]
 [ext_resource type="Script" uid="uid://2iw6mx0i5bxu" path="res://components/hitbox.gd" id="7_lobsm"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tk6jg"]
@@ -29,9 +31,6 @@ size = Vector2(226, 89)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3n7q"]
 size = Vector2(241, 119)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mudj"]
-size = Vector2(674, 102)
-
 [node name="Node2D" type="Node2D" unique_id=1300639145]
 script = ExtResource("1_lobsm")
 metadata/_edit_lock_ = true
@@ -44,10 +43,9 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1409894524]
-position = Vector2(-473, 11)
+position = Vector2(-518, 9)
 collision_mask = 4
 script = ExtResource("2_2c8j4")
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1682412235]
 position = Vector2(-3, 2)
@@ -75,62 +73,11 @@ position = Vector2(-2, 2)
 shape = SubResource("CapsuleShape2D_lobsm")
 metadata/_edit_lock_ = true
 
-[node name="bloque_luz" type="StaticBody2D" parent="." unique_id=326889843]
-light_mask = 4
+[node name="bloque_luz" parent="." unique_id=231995529 instance=ExtResource("5_khhis")]
 position = Vector2(-333, 22)
-collision_layer = 4
-script = ExtResource("4_tk6jg")
 
-[node name="Sprite2D" type="Sprite2D" parent="bloque_luz" unique_id=1440055891]
-position = Vector2(196, 79)
-scale = Vector2(2.09375, 1)
-texture = ExtResource("1_iput8")
-metadata/_edit_lock_ = true
-
-[node name="colisionPared" type="CollisionShape2D" parent="bloque_luz" unique_id=1171248556]
-position = Vector2(196, 77.25)
-shape = SubResource("RectangleShape2D_2c8j4")
-metadata/_edit_lock_ = true
-
-[node name="Area2D" type="Area2D" parent="bloque_luz" unique_id=133463852]
-light_mask = 4
-visibility_layer = 2
-position = Vector2(-241, 23)
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("5_x0dh1")
-metadata/_edit_lock_ = true
-
-[node name="colisionKill" type="CollisionShape2D" parent="bloque_luz/Area2D" unique_id=1616111784]
-position = Vector2(435, 72)
-shape = SubResource("RectangleShape2D_lobsm")
-metadata/_edit_lock_ = true
-
-[node name="areaKill" type="Area2D" parent="bloque_luz" unique_id=86472230]
-collision_layer = 16
-collision_mask = 32
-script = ExtResource("7_lobsm")
-metadata/_edit_lock_ = true
-
-[node name="trueKillCollision" type="CollisionShape2D" parent="bloque_luz/areaKill" unique_id=233810577]
-position = Vector2(210.5, 78.5)
-shape = SubResource("RectangleShape2D_x3n7q")
-metadata/_edit_lock_ = true
-
-[node name="suelo" type="StaticBody2D" parent="." unique_id=426880829]
-position = Vector2(-208, 20)
-collision_layer = 4
-metadata/_edit_lock_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="suelo" unique_id=606621498]
-position = Vector2(-4.7683716e-07, 209)
-scale = Vector2(5.3984375, 1)
-texture = ExtResource("1_iput8")
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo" unique_id=1158671027]
-position = Vector2(-1, 212)
-shape = SubResource("RectangleShape2D_6mudj")
+[node name="suelo" parent="." unique_id=363523995 instance=ExtResource("6_hdkg3")]
+position = Vector2(-202, 150)
 
 [node name="bloque_luz2" type="StaticBody2D" parent="." unique_id=1992365676]
 light_mask = 4
