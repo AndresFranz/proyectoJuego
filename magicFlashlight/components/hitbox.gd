@@ -6,5 +6,5 @@ func _ready() -> void:
 
 func on_area_entered(area: Area2D) -> void:
 	if area.has_method("die"):
-		print("ALOOOO me estan llamando ono")
+		#print("ALOOOO me estan llamando ono")
 		area.die()

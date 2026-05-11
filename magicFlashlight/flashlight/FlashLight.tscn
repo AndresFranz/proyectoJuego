@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://clmrs3an4xda6"]
 
 [ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_hx8vk"]
-[ext_resource type="Script" uid="uid://ck5qvuh76y62m" path="res://flashlight/linterna/linternaScript.gd" id="1_jlm58"]
+[ext_resource type="Script" uid="uid://ck5qvuh76y62m" path="res://Flashlight/linternaScript.gd" id="1_jlm58"]
 
 [sub_resource type="Gradient" id="Gradient_jlm58"]
 
