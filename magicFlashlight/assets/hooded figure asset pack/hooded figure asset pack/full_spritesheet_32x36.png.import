@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3nxvm36mgas0"
-path="res://.godot/imported/hurt.png-e1ea063482e1df4a6c5c1e9fe0a260a8.ctex"
+uid="uid://ddpx5ywu5mphh"
+path="res://.godot/imported/full_spritesheet_32x36.png-98d67f66f5dbf225b72584008af4c20a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hooded figure asset pack/hooded figure asset pack/hurt.png"
-dest_files=["res://.godot/imported/hurt.png-e1ea063482e1df4a6c5c1e9fe0a260a8.ctex"]
+source_file="res://assets/hooded figure asset pack/hooded figure asset pack/full_spritesheet_32x36.png"
+dest_files=["res://.godot/imported/full_spritesheet_32x36.png-98d67f66f5dbf225b72584008af4c20a.ctex"]
 
 [params]
 

@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://djfcyfi7a5yn0"]
 
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://d0mg374mdirok" path="res://hooded figure asset pack/hooded figure asset pack/idle.png" id="1_glpr6"]
 [ext_resource type="Script" uid="uid://c72ydci0npyev" path="res://character.gd" id="1_wa5vi"]
 [ext_resource type="Texture2D" uid="uid://dprqwxmv7wc4q" path="res://hooded figure asset pack/hooded figure asset pack/run.png" id="2_pjt0s"]
+=======
+[ext_resource type="Texture2D" uid="uid://d0mg374mdirok" path="res://assets/hooded figure asset pack/hooded figure asset pack/idle.png" id="1_glpr6"]
+>>>>>>> levels
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vu45j"]
 radius = 11.0
