@@ -10,6 +10,7 @@ func _ready() -> void:
 	Area.monitoring = false 
 
 func _process(delta: float) -> void:
+	look_at(get_global_mouse_position())
 	if Input.is_action_just_pressed("turn_on_off"):
 		Light.visible = not Light.visible
 		Area.monitorable = not Area.monitorable
