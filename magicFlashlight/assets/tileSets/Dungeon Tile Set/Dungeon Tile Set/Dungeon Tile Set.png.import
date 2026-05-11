@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0mg374mdirok"
-path="res://.godot/imported/idle.png-bd18291b532f923c64d1cf9e424237f6.ctex"
+uid="uid://bdt3uvv6vf7qd"
+path="res://.godot/imported/Dungeon Tile Set.png-d5f60aac5ecc5f7793698583ec7c7183.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hooded figure asset pack/hooded figure asset pack/idle.png"
-dest_files=["res://.godot/imported/idle.png-bd18291b532f923c64d1cf9e424237f6.ctex"]
+source_file="res://assets/tileSets/Dungeon Tile Set/Dungeon Tile Set/Dungeon Tile Set.png"
+dest_files=["res://.godot/imported/Dungeon Tile Set.png-d5f60aac5ecc5f7793698583ec7c7183.ctex"]
 
 [params]
 

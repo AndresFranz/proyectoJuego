@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcnwmvnaswbm1"
-path="res://.godot/imported/cover_image.png-8fdb5619d3a3c34d99581762e0bd9282.ctex"
+uid="uid://3q1xvutop0br"
+path="res://.godot/imported/dungeon-mode.png-ad46880e63e68c954407fee5d08a07d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hooded figure asset pack/hooded figure asset pack/cover_image.png"
-dest_files=["res://.godot/imported/cover_image.png-8fdb5619d3a3c34d99581762e0bd9282.ctex"]
+source_file="res://assets/fonts/dungeonmode/dungeonmode/rexpaint/data/fonts/dungeon-mode.png"
+dest_files=["res://.godot/imported/dungeon-mode.png-ad46880e63e68c954407fee5d08a07d2.ctex"]
 
 [params]
 
