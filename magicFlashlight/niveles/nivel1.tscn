@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://21vebp4tn71x"]
 
 [ext_resource type="PackedScene" uid="uid://nbhryltmisfi" path="res://espacio_levels/level1.tscn" id="1_rd7nm"]
-[ext_resource type="Script" path="res://characterScript.gd" id="2_2u817"]
+[ext_resource type="Script" uid="uid://bcyhh0vojqckj" path="res://characterScript.gd" id="2_2u817"]
 [ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://flashlight/FlashLight.tscn" id="3_2o2jj"]
 [ext_resource type="Script" uid="uid://bxaush0av8s31" path="res://components/heartbox.gd" id="4_h7kka"]
+[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="5_2u817"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p6c0m"]
 radius = 32.0
@@ -19,6 +20,7 @@ height = 60.0
 [node name="Nivel1" type="Node2D" unique_id=527181951]
 
 [node name="Level1" parent="." unique_id=891566079 instance=ExtResource("1_rd7nm")]
+position = Vector2(50, -3)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1056976696]
 position = Vector2(139, -111)
@@ -54,6 +56,13 @@ metadata/_edit_lock_ = true
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=904941433]
 position = Vector2(458, -228)
 
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=825189286]
+position = Vector2(-3.0000072, -0.9999962)
+rotation = 1.5707964
+scale = Vector2(0.34189522, 0.39651528)
+energy = 1.49
+texture = ExtResource("5_2u817")
+
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
-color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+color = Color(0.16924527, 0.1692453, 0.16924527, 1)
 metadata/_edit_lock_ = true
