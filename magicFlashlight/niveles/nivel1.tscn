@@ -57,12 +57,12 @@ metadata/_edit_lock_ = true
 position = Vector2(458, -228)
 
 [node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=825189286]
-position = Vector2(-3.0000072, -0.9999962)
+position = Vector2(-3.0000052, -0.9999962)
 rotation = 1.5707964
-scale = Vector2(0.34189522, 0.39651528)
-energy = 1.49
+scale = Vector2(0.36819342, 0.44272128)
+energy = 6.08
 texture = ExtResource("5_2u817")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
-color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+color = Color(0.32915857, 0.32915834, 0.32915846, 1)
 metadata/_edit_lock_ = true

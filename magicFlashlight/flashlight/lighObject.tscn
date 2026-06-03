@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://s74b8cmij6y4"]
+
+[sub_resource type="GDScript" id="GDScript_547nv"]
+script/source = "extends PointLight2D
+
+@export var cone_angle: float = 45.0      # apertura del cono en grados
+@export var cone_length: float = 200.0    # largo del cono
+@export var light_color: Color = Color(1, 0.9, 0.6, 1)  # color cálido
+
+func _ready() -> void:
+	texture = _generate_cone_texture(256, 256)
+	texture_scale = cone_length / 128.0
+	color = light_color
+	energy = 1.5
+	shadow_enabled = true
+
+func _generate_cone_texture(width: int, height: int) -> ImageTexture:
+	var image = Image.create(width, height, false, Image.FORMAT_RGBA8)
+	
+	var center_x = width / 2.0
+	var center_y = height / 2.0  # origen en el centro
+	var half_angle = deg_to_rad(cone_angle / 2.0)
+	
+	for y in range(height):
+		for x in range(width):
+			var dx = x - center_x
+			var dy = y - center_y  # hacia abajo = dirección del cono
+			
+			var dist = sqrt(dx * dx + dy * dy)
+			var max_dist = height / 2.0
+			
+			# solo pinta hacia abajo (dy >= 0)
+			if dy < 0:
+				image.set_pixel(x, y, Color(0, 0, 0, 0))
+				continue
+			
+			# ángulo desde el centro
+			var angle = abs(atan2(dx, dy))
+			
+			# fuera del cono → transparente
+			if angle > half_angle:
+				image.set_pixel(x, y, Color(0, 0, 0, 0))
+				continue
+			
+			# falloff por distancia (más lejos = más transparente)
+			var dist_falloff = 1.0 - smoothstep(0.0, max_dist, dist)
+			
+			# falloff por ángulo (bordes suaves)
+			var angle_falloff = 1.0 - smoothstep(half_angle * 0.6, half_angle, angle)
+			
+			var alpha = dist_falloff * angle_falloff
+			image.set_pixel(x, y, Color(1, 1, 1, alpha))
+	
+	return ImageTexture.create_from_image(image)
+"
+
+[node name="ConeLight" type="PointLight2D" unique_id=1913609783]
+script = SubResource("GDScript_547nv")
