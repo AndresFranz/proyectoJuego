@@ -11,6 +11,7 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
+	print("start")
 	LevelManager.start()
 	
 func _on_quit_pressed() -> void:

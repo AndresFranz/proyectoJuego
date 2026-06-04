@@ -18,10 +18,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.0
+offset_left = -120.5
 offset_top = -81.5
-offset_right = 35.0
-offset_bottom = 81.5
+offset_right = 180.0
+offset_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -36,29 +36,35 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1579247744]
 layout_mode = 2
 theme_type_variation = &"Title"
+theme_override_colors/font_color = Color(0, 0, 1, 1)
 text = "Game"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=733980409]
 layout_mode = 2
-text = "this is fun"
+theme_override_colors/font_color = Color(0.67086744, 0.67086697, 3.85046e-07, 1)
+text = "Magic Flash Light"
 
 [node name="Start" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=516099098]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0, 0, 1)
 text = "Start"
 
 [node name="Settings" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1918208766]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0, 0, 1)
 text = "Settings"
 
 [node name="Credits" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=300963168]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0, 0, 1)
 text = "Credits"
 
 [node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=262957973]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0, 0, 1)
 text = "Quit"
