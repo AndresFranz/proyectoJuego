@@ -8,9 +8,7 @@ var current_level = 0
 
 func start() -> void:
 	current_level = 0
-	print("¿El array tiene niveles?: ", Levels.size())
 	if not Levels.is_empty():
-		print("managerStartIF")
 		get_tree().change_scene_to_packed(Levels[0])
 
 func next_level() -> void:
