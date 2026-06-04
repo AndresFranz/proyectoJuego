@@ -1,20 +1,15 @@
 extends Control
 
-@onready var resume: Button = $Panel/MarginContainer/VBoxContainer/resume
 @onready var replay: Button = $Panel/MarginContainer/VBoxContainer/replay
 @onready var credits: Button = $Panel/MarginContainer/VBoxContainer/credits
 @onready var menu: Button = $Panel/MarginContainer/VBoxContainer/menu
+@onready var next: Button = $Panel/MarginContainer/VBoxContainer/next
 
 func _ready() -> void:
-	resume.pressed.connect(_on_resume_pressed)
 	replay.pressed.connect(_on_replay_pressed)
 	menu.pressed.connect(_on_menu_pressed)
 	credits.pressed.connect(_on_credits_pressed)
-
-
-func _on_resume_pressed() -> void:
-	get_tree().paused = false
-	visible = false
+	next.pressed.connect(_on_next_pressed)
 	
 func _on_replay_pressed() -> void:
 	get_tree().paused = false
@@ -28,3 +23,7 @@ func _on_menu_pressed() -> void:
 func _on_credits_pressed() -> void:
 	visible = false
 	LevelManager.credits()
+
+func _on_next_pressed() -> void:
+	visible = false
+	LevelManager.next_level()
