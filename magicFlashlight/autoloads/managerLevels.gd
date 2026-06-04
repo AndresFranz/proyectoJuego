@@ -2,19 +2,21 @@ extends Node
 
 @export var main_menu_scene: PackedScene
 #@export var credits_scene: PackedScene
-@export var levels: Array[PackedScene]
+@export var Levels: Array[PackedScene]
 
 var current_level = 0
 
 func start() -> void:
 	current_level = 0
-	if not levels.is_empty():
-		get_tree().change_scene_to_packed(levels[0])
+	print("¿El array tiene niveles?: ", Levels.size())
+	if not Levels.is_empty():
+		print("managerStartIF")
+		get_tree().change_scene_to_packed(Levels[0])
 
 func next_level() -> void:
 	current_level += 1
-	if current_level < levels.size():
-		get_tree().change_scene_to_packed(levels[current_level])
+	if current_level < Levels.size():
+		get_tree().change_scene_to_packed(Levels[current_level])
 	else:
 		#credits()
 		pass
