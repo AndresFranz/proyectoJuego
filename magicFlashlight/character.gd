@@ -25,7 +25,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	
 
 	#Animation
 	if direction:
@@ -41,5 +40,8 @@ func _physics_process(delta: float) -> void:
 			playback.travel("jump")
 		else:
 			playback.travel("fall")
-	
+			
+
+func player_die() -> void:
+	queue_free()
 	

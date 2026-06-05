@@ -5,4 +5,4 @@ extends Area2D
 
 func die() ->void:
 	print("alo debugeo queque de personaje")
-	character_body_2d.player_die()
+	get_parent().player_die()

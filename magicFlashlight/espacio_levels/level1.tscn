@@ -1609,7 +1609,7 @@ terrain_set_1/mode = 0
 sources/0 = SubResource("TileSetAtlasSource_f2gkp")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uslt4"]
-radius = 18.973665
+radius = 19.525623
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f2gkp"]
 size = Vector2(41, 12)
