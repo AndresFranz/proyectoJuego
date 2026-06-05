@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://21vebp4tn71x"]
+
+[ext_resource type="Script" uid="uid://c0mvoc68cx5tl" path="res://niveles/levels.gd" id="1_h7kka"]
+[ext_resource type="PackedScene" uid="uid://nbhryltmisfi" path="res://espacio_levels/level1.tscn" id="1_rd7nm"]
+[ext_resource type="Script" uid="uid://bcyhh0vojqckj" path="res://characterScript.gd" id="2_2u817"]
+[ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://flashlight/FlashLight.tscn" id="3_2o2jj"]
+[ext_resource type="Script" uid="uid://bxaush0av8s31" path="res://components/heartbox.gd" id="4_h7kka"]
+[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="5_2u817"]
+[ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause.tscn" id="7_p6c0m"]
+[ext_resource type="PackedScene" uid="uid://ctj0r4wrld2q7" path="res://UI/menu/menu_finished.tscn" id="8_cmcqe"]
+[ext_resource type="Script" uid="uid://b2lxd4niavln2" path="res://niveles/puerta.gd" id="8_rml80"]
+[ext_resource type="Texture2D" uid="uid://clh22pcpsa6fh" path="res://assets/obstaculos/spr_portal_strip8.png" id="9_cmcqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u8hoo"]
+size = Vector2(39.875, 194.25)
+
+[sub_resource type="Animation" id="Animation_h0ras"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_uslt4"]
+resource_name = "dor"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mncda"]
+_data = {
+&"RESET": SubResource("Animation_h0ras"),
+&"dor": SubResource("Animation_uslt4")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p6c0m"]
+radius = 32.0
+height = 72.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rml80"]
+load_path = "res://.godot/imported/jump.png-ea68b7545978b07dda59e3eb60b445a2.ctex"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cmcqe"]
+radius = 26.0
+height = 60.0
+
+[node name="Nivel1" type="Node2D" unique_id=527181951]
+script = ExtResource("1_h7kka")
+
+[node name="Level1" parent="." unique_id=891566079 instance=ExtResource("1_rd7nm")]
+position = Vector2(50, -3)
+
+[node name="puerta" type="Area2D" parent="." unique_id=1479866768 node_paths=PackedStringArray("menu_finalizacion")]
+position = Vector2(2, -204)
+collision_mask = 5
+script = ExtResource("8_rml80")
+menu_finalizacion = NodePath("../menu/MenuFinished")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puerta" unique_id=13968300]
+position = Vector2(4331.0625, -149)
+shape = SubResource("RectangleShape2D_u8hoo")
+
+[node name="Sprite2D" type="Sprite2D" parent="puerta" unique_id=740359618]
+position = Vector2(4313, -116)
+texture = ExtResource("9_cmcqe")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="puerta" unique_id=1048702701]
+libraries/ = SubResource("AnimationLibrary_mncda")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1056976696]
+position = Vector2(139, -111)
+collision_mask = 5
+script = ExtResource("2_2u817")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=717156371]
+position = Vector2(-3, 2)
+shape = SubResource("CapsuleShape2D_p6c0m")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1659718549]
+position = Vector2(-1.0000038, 1.9999962)
+scale = Vector2(3.8124998, 3.472222)
+texture = SubResource("CompressedTexture2D_rml80")
+hframes = 2
+metadata/_edit_lock_ = true
+
+[node name="LinternaObject" parent="CharacterBody2D" unique_id=786015511 instance=ExtResource("3_2o2jj")]
+
+[node name="heartbox" type="Area2D" parent="CharacterBody2D" unique_id=518923639 node_paths=PackedStringArray("character_body_2d")]
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("4_h7kka")
+character_body_2d = NodePath("..")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/heartbox" unique_id=56599544]
+position = Vector2(-2, 2)
+shape = SubResource("CapsuleShape2D_cmcqe")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=904941433]
+position = Vector2(139, -65)
+zoom = Vector2(2, 2)
+
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=825189286]
+position = Vector2(-3.0000072, -0.9999962)
+rotation = 1.5707964
+scale = Vector2(0.34189522, 0.39651528)
+energy = 1.49
+texture = ExtResource("5_2u817")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
+color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+metadata/_edit_lock_ = true
+
+[node name="menu" type="CanvasLayer" parent="." unique_id=1761207640]
+
+[node name="menu_pause" parent="menu" unique_id=1026010211 instance=ExtResource("7_p6c0m")]
+visible = false
+
+[node name="MenuFinished" parent="menu" unique_id=1048915644 instance=ExtResource("8_cmcqe")]
+process_mode = 2
+visible = false

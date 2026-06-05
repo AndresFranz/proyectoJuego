@@ -1,0 +1,4 @@
+Fonts -> DUNGEON.mode by datagoblin
+TileSet -> Pixel Fantasy Caves by szadiart
+door -> Pixel Portal by lizcheong
+obstáculos -> 500+ Deadly traps + batch color replacer software by rehandev

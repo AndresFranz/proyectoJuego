@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://djfcyfi7a5yn0"]
 
-[ext_resource type="Texture2D" uid="uid://d0mg374mdirok" path="res://hooded figure asset pack/hooded figure asset pack/idle.png" id="1_glpr6"]
+[ext_resource type="Texture2D" uid="uid://d0mg374mdirok" path="res://assets/hooded figure asset pack/hooded figure asset pack/idle.png" id="1_glpr6"]
 [ext_resource type="Script" uid="uid://c72ydci0npyev" path="res://character.gd" id="1_wa5vi"]
-[ext_resource type="Texture2D" uid="uid://dprqwxmv7wc4q" path="res://hooded figure asset pack/hooded figure asset pack/run.png" id="2_pjt0s"]
-[ext_resource type="Texture2D" uid="uid://cy67xunapei8" path="res://hooded figure asset pack/hooded figure asset pack/fall.png" id="3_px5sl"]
-[ext_resource type="Texture2D" uid="uid://b6jsxutvfk0sp" path="res://hooded figure asset pack/hooded figure asset pack/jump.png" id="3_wfnr8"]
-[ext_resource type="Texture2D" uid="uid://c3nxvm36mgas0" path="res://hooded figure asset pack/hooded figure asset pack/hurt.png" id="4_0qfo5"]
+[ext_resource type="Texture2D" uid="uid://dprqwxmv7wc4q" path="res://assets/hooded figure asset pack/hooded figure asset pack/run.png" id="2_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://cy67xunapei8" path="res://assets/hooded figure asset pack/hooded figure asset pack/fall.png" id="3_px5sl"]
+[ext_resource type="Texture2D" uid="uid://b6jsxutvfk0sp" path="res://assets/hooded figure asset pack/hooded figure asset pack/jump.png" id="3_wfnr8"]
+[ext_resource type="Texture2D" uid="uid://c3nxvm36mgas0" path="res://assets/hooded figure asset pack/hooded figure asset pack/hurt.png" id="4_0qfo5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vu45j"]
 radius = 11.0
