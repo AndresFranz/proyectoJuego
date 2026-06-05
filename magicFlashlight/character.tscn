@@ -273,6 +273,9 @@ _data = {
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_px5sl"]
 animation = &"fall"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qi5as"]
+animation = &"hurt"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wa5vi"]
 animation = &"idle"
 
@@ -301,17 +304,31 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bwfjh"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x1sy7"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sm1rv"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jx0ln"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lpiy1"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_88tkl"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wa5vi"]
 states/Start/position = Vector2(136, 110.576645)
 states/fall/node = SubResource("AnimationNodeAnimation_px5sl")
-states/fall/position = Vector2(569.19995, -27.606014)
+states/fall/position = Vector2(532.39996, 50.793983)
+states/hurt/node = SubResource("AnimationNodeAnimation_qi5as")
+states/hurt/position = Vector2(607.27997, -49.39801)
 states/idle/node = SubResource("AnimationNodeAnimation_wa5vi")
 states/idle/position = Vector2(332.4, 124.576004)
 states/jump/node = SubResource("AnimationNodeAnimation_0qfo5")
-states/jump/position = Vector2(344.08, -27.158012)
+states/jump/position = Vector2(284.88, 32.963585)
 states/run/node = SubResource("AnimationNodeAnimation_wfnr8")
 states/run/position = Vector2(607.6, 110.06081)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_px5sl"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_0qfo5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_yxww1"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_wdpcj"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_qi5as"), "fall", "run", SubResource("AnimationNodeStateMachineTransition_jb3kq"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_c1b4b"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_7tnxx"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_bwfjh")]
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_px5sl"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_0qfo5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_yxww1"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_wdpcj"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_qi5as"), "fall", "run", SubResource("AnimationNodeStateMachineTransition_jb3kq"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_c1b4b"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_7tnxx"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_bwfjh"), "jump", "hurt", SubResource("AnimationNodeStateMachineTransition_x1sy7"), "idle", "hurt", SubResource("AnimationNodeStateMachineTransition_sm1rv"), "run", "hurt", SubResource("AnimationNodeStateMachineTransition_jx0ln"), "fall", "hurt", SubResource("AnimationNodeStateMachineTransition_lpiy1"), "hurt", "End", SubResource("AnimationNodeStateMachineTransition_88tkl")]
 graph_offset = Vector2(0, -77.39801)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tnxx"]
