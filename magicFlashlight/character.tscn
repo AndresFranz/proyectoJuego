@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cy67xunapei8" path="res://assets/hooded figure asset pack/hooded figure asset pack/fall.png" id="3_px5sl"]
 [ext_resource type="Texture2D" uid="uid://b6jsxutvfk0sp" path="res://assets/hooded figure asset pack/hooded figure asset pack/jump.png" id="3_wfnr8"]
 [ext_resource type="Texture2D" uid="uid://c3nxvm36mgas0" path="res://assets/hooded figure asset pack/hooded figure asset pack/hurt.png" id="4_0qfo5"]
+[ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://flashlight/FlashLight.tscn" id="7_qi5as"]
+[ext_resource type="Script" uid="uid://bxaush0av8s31" path="res://components/heartbox.gd" id="8_jb3kq"]
+[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="9_c1b4b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vu45j"]
 radius = 11.0
@@ -311,6 +314,10 @@ states/run/position = Vector2(607.6, 110.06081)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_px5sl"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_0qfo5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_yxww1"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_wdpcj"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_qi5as"), "fall", "run", SubResource("AnimationNodeStateMachineTransition_jb3kq"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_c1b4b"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_7tnxx"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_bwfjh")]
 graph_offset = Vector2(0, -77.39801)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tnxx"]
+radius = 26.0
+height = 60.0
+
 [node name="Character" type="CharacterBody2D" unique_id=865322138]
 script = ExtResource("1_wa5vi")
 
@@ -331,3 +338,28 @@ anim_player = NodePath("../AnimationPlayer")
 scale = Vector2(4, 4)
 texture = ExtResource("1_glpr6")
 hframes = 4
+
+[node name="LinternaObject" parent="Pivote" unique_id=786015511 instance=ExtResource("7_qi5as")]
+
+[node name="heartbox" type="Area2D" parent="." unique_id=597204216 node_paths=PackedStringArray("character_body_2d")]
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("8_jb3kq")
+character_body_2d = NodePath("")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="heartbox" unique_id=1785918486]
+position = Vector2(-2, 2)
+shape = SubResource("CapsuleShape2D_7tnxx")
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=942629211]
+position = Vector2(139, -65)
+zoom = Vector2(2, 2)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1038583604]
+position = Vector2(-3.0000072, -0.9999962)
+rotation = 1.5707964
+scale = Vector2(0.34189522, 0.39651528)
+energy = 1.49
+texture = ExtResource("9_c1b4b")
