@@ -336,6 +336,7 @@ radius = 18.0
 height = 62.0
 
 [node name="Character" type="CharacterBody2D" unique_id=865322138]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_wa5vi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=702880591]
@@ -368,13 +369,14 @@ metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=942629211]
 position = Vector2(139, -65)
-zoom = Vector2(2, 2)
+zoom = Vector2(5, 5)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1038583604]
 position = Vector2(-3.0000072, -0.9999962)
 rotation = 1.5707964
-scale = Vector2(0.34189522, 0.39651528)
-energy = 1.49
+scale = Vector2(0.6, 0.696)
+energy = 1.8
 texture = ExtResource("9_c1b4b")
 
 [node name="LinternaObject" parent="." unique_id=786015511 instance=ExtResource("7_qi5as")]
+position = Vector2(0, 4)

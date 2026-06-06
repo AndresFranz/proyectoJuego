@@ -5,8 +5,8 @@ extends CharacterBody2D
 @onready var pivote: Node2D = $Pivote
 
 
-@export var SPEED = 400.0
-@export var JUMP_SPEED = 500.0
+@export var SPEED = 200.0
+@export var JUMP_SPEED = 300.0
 
 
 var is_dead := false

@@ -6,30 +6,25 @@
 
 [node name="LinternaObject" type="Node2D" unique_id=786015511]
 script = ExtResource("1_jlm58")
-metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1296824987]
-position = Vector2(-16, -1)
 scale = Vector2(0.2421875, 0.11328125)
 texture = ExtResource("1_hx8vk")
-metadata/_edit_lock_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=834511003]
 light_mask = 2
 visibility_layer = 4
 collision_layer = 2
 collision_mask = 8
-metadata/_edit_lock_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1938941955]
 modulate = Color(1, 0, 0, 1)
-polygon = PackedVector2Array(0, 0, 188, 46, 187, -41)
-metadata/_edit_lock_ = true
+polygon = PackedVector2Array(12, 0, 365, 85, 364, -77)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=57110234]
-position = Vector2(104.54604, 6.027555e-07)
+position = Vector2(189.03023, 8.589519e-07)
 rotation = 4.712389
-scale = Vector2(2.4767506, 2.861184)
+scale = Vector2(3.7594385, 4.870956)
 energy = 5.08
 shadow_enabled = true
 shadow_filter = 2
