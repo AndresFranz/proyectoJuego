@@ -74,6 +74,10 @@ hframes = 8
 [node name="AnimationPlayer" type="AnimationPlayer" parent="puerta" unique_id=1048702701]
 libraries/ = SubResource("AnimationLibrary_mncda")
 
+[node name="Character" parent="." unique_id=865322138 instance=ExtResource("7_h7kka")]
+position = Vector2(119, -88)
+collision_mask = 5
+
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
 color = Color(0.16924527, 0.1692453, 0.16924527, 1)
 metadata/_edit_lock_ = true
@@ -86,6 +90,3 @@ visible = false
 [node name="MenuFinished" parent="menu" unique_id=1048915644 instance=ExtResource("8_cmcqe")]
 process_mode = 2
 visible = false
-
-[node name="Character" parent="." unique_id=865322138 instance=ExtResource("7_h7kka")]
-position = Vector2(119, -88)
