@@ -474,3 +474,11 @@ texture = ExtResource("9_c1b4b")
 
 [node name="LinternaObject" parent="." unique_id=786015511 instance=ExtResource("7_qi5as")]
 position = Vector2(0, 4)
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=2063134343]
+position = Vector2(-1.4305115e-06, 4.7683716e-07)
+rotation = 1.5707964
+scale = Vector2(1.2274328, 1.2274328)
+energy = 1.15
+texture = ExtResource("9_c1b4b")
+texture_scale = 0.35
