@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c3nxvm36mgas0" path="res://assets/hooded figure asset pack/hooded figure asset pack/hurt.png" id="4_0qfo5"]
 [ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://flashlight/FlashLight.tscn" id="7_qi5as"]
 [ext_resource type="Script" uid="uid://bxaush0av8s31" path="res://components/heartbox.gd" id="8_jb3kq"]
-[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="9_c1b4b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vu45j"]
 radius = 11.0
@@ -376,6 +375,9 @@ animation = &"jump"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wfnr8"]
 animation = &"run"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jb3kq"]
+animation = &"win"
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_px5sl"]
 advance_mode = 2
 
@@ -407,6 +409,14 @@ advance_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y0ipg"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kjduu"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3d8aq"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8i6g0"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wa5vi"]
 states/Start/position = Vector2(136, 110.576645)
 states/fall/node = SubResource("AnimationNodeAnimation_px5sl")
@@ -414,17 +424,22 @@ states/fall/position = Vector2(532.39996, 50.793983)
 states/hurt/node = SubResource("AnimationNodeAnimation_qi5as")
 states/hurt/position = Vector2(607.27997, -49.39801)
 states/idle/node = SubResource("AnimationNodeAnimation_wa5vi")
-states/idle/position = Vector2(332.4, 124.576004)
+states/idle/position = Vector2(266.8, 127.776)
 states/jump/node = SubResource("AnimationNodeAnimation_0qfo5")
-states/jump/position = Vector2(284.88, 32.963585)
+states/jump/position = Vector2(347.28, 50.267902)
 states/run/node = SubResource("AnimationNodeAnimation_wfnr8")
 states/run/position = Vector2(607.6, 110.06081)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_px5sl"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_0qfo5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_yxww1"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_wdpcj"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_qi5as"), "fall", "run", SubResource("AnimationNodeStateMachineTransition_jb3kq"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_c1b4b"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_7tnxx"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_bwfjh"), "jump", "hurt", SubResource("AnimationNodeStateMachineTransition_x1sy7"), "idle", "hurt", SubResource("AnimationNodeStateMachineTransition_sm1rv"), "run", "hurt", SubResource("AnimationNodeStateMachineTransition_jx0ln"), "fall", "hurt", SubResource("AnimationNodeStateMachineTransition_lpiy1"), "hurt", "End", SubResource("AnimationNodeStateMachineTransition_88tkl")]
-graph_offset = Vector2(0, -77.39801)
+states/win/node = SubResource("AnimationNodeAnimation_jb3kq")
+states/win/position = Vector2(480.4, 201.51303)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_px5sl"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_0qfo5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_yxww1"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_wdpcj"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_qi5as"), "fall", "run", SubResource("AnimationNodeStateMachineTransition_jb3kq"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_c1b4b"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_7tnxx"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_bwfjh"), "jump", "hurt", SubResource("AnimationNodeStateMachineTransition_x1sy7"), "idle", "hurt", SubResource("AnimationNodeStateMachineTransition_sm1rv"), "run", "hurt", SubResource("AnimationNodeStateMachineTransition_jx0ln"), "fall", "hurt", SubResource("AnimationNodeStateMachineTransition_lpiy1"), "hurt", "End", SubResource("AnimationNodeStateMachineTransition_88tkl"), "idle", "win", SubResource("AnimationNodeStateMachineTransition_y0ipg"), "run", "win", SubResource("AnimationNodeStateMachineTransition_kjduu"), "jump", "win", SubResource("AnimationNodeStateMachineTransition_3d8aq"), "fall", "win", SubResource("AnimationNodeStateMachineTransition_8i6g0")]
+graph_offset = Vector2(0, 7.913021)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tnxx"]
 radius = 18.0
 height = 62.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wdpcj"]
+load_path = "res://.godot/imported/light_oval.png-42f56eeb03d526e1f10193605b726a0d.ctex"
 
 [node name="Character" type="CharacterBody2D" unique_id=865322138]
 scale = Vector2(0.3, 0.3)
@@ -465,20 +480,11 @@ position = Vector2(120, -65)
 zoom = Vector2(5, 5)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1038583604]
-visible = false
 position = Vector2(-3.0000072, -0.9999962)
 rotation = 1.5707964
 scale = Vector2(0.5, 0.58)
 energy = 1.8
-texture = ExtResource("9_c1b4b")
+texture = SubResource("CompressedTexture2D_wdpcj")
 
 [node name="LinternaObject" parent="." unique_id=786015511 instance=ExtResource("7_qi5as")]
 position = Vector2(0, 4)
-
-[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=2063134343]
-position = Vector2(-1.4305115e-06, 4.7683716e-07)
-rotation = 1.5707964
-scale = Vector2(1.2274328, 1.2274328)
-energy = 1.15
-texture = ExtResource("9_c1b4b")
-texture_scale = 0.35

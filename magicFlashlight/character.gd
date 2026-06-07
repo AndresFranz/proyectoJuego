@@ -10,9 +10,13 @@ extends CharacterBody2D
 
 
 var is_dead := false
+var has_won := false
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
+		return
+	
+	if has_won:
 		return
 
 	if not is_on_floor():
@@ -52,3 +56,12 @@ func player_die() -> void:
 	playback.travel("hurt")
 	await animation_tree.animation_finished
 	queue_free()
+
+
+func win_dance() -> void:
+	if has_won:
+		return
+
+	has_won = true
+	velocity = Vector2.ZERO
+	playback.travel("win")
