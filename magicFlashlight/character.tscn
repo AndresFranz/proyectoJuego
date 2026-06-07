@@ -477,7 +477,7 @@ metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=942629211]
 position = Vector2(120, -65)
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1038583604]
 position = Vector2(-3.0000072, -0.9999962)

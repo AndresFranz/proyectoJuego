@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 LevelManager="*uid://c6lc8nx8n7vuh"
 
+[display]
+
+window/size/mode=2
+window/stretch/mode="canvas_items"
+
 [gui]
 
 theme/custom_font="uid://dsvf3b56ndiqf"
