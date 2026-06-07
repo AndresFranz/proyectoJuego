@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var playback = animation_tree["parameters/playback"]
 @onready var pivote: Node2D = $Pivote
+@onready var linterna: Node2D = $LinternaObject
+@onready var point_light: PointLight2D = $PointLight2D
 
 
 @export var SPEED = 180.0
@@ -64,4 +66,8 @@ func win_dance() -> void:
 
 	has_won = true
 	velocity = Vector2.ZERO
+
+	linterna.visible = false
+	point_light.visible = false
+
 	playback.travel("win")
