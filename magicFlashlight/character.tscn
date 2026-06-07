@@ -432,7 +432,7 @@ states/run/position = Vector2(607.6, 110.06081)
 states/win/node = SubResource("AnimationNodeAnimation_jb3kq")
 states/win/position = Vector2(480.4, 201.51303)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_px5sl"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_0qfo5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_yxww1"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_wdpcj"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_qi5as"), "fall", "run", SubResource("AnimationNodeStateMachineTransition_jb3kq"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_c1b4b"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_7tnxx"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_bwfjh"), "jump", "hurt", SubResource("AnimationNodeStateMachineTransition_x1sy7"), "idle", "hurt", SubResource("AnimationNodeStateMachineTransition_sm1rv"), "run", "hurt", SubResource("AnimationNodeStateMachineTransition_jx0ln"), "fall", "hurt", SubResource("AnimationNodeStateMachineTransition_lpiy1"), "hurt", "End", SubResource("AnimationNodeStateMachineTransition_88tkl"), "idle", "win", SubResource("AnimationNodeStateMachineTransition_y0ipg"), "run", "win", SubResource("AnimationNodeStateMachineTransition_kjduu"), "jump", "win", SubResource("AnimationNodeStateMachineTransition_3d8aq"), "fall", "win", SubResource("AnimationNodeStateMachineTransition_8i6g0")]
-graph_offset = Vector2(0, 7.913021)
+graph_offset = Vector2(0, -45.97329)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tnxx"]
 radius = 18.0

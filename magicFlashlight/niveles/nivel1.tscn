@@ -14,7 +14,7 @@ script = ExtResource("1_h7kka")
 position = Vector2(50, -3)
 
 [node name="puerta" parent="." unique_id=211982980 node_paths=PackedStringArray("menu_finalizacion") instance=ExtResource("3_p6c0m")]
-position = Vector2(4387, -278)
+position = Vector2(4388, -279)
 menu_finalizacion = NodePath("../menu/MenuFinished")
 
 [node name="Character" parent="." unique_id=865322138 instance=ExtResource("7_h7kka")]

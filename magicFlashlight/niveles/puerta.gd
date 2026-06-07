@@ -3,6 +3,7 @@ extends Area2D
 @export var menu_finalizacion: Control
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var sprite_2d_2: Sprite2D = $Sprite2D2
+@onready var point_light_2d: PointLight2D = $PointLight2D
 
 var already_finished := false
 
@@ -16,6 +17,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") or body.name == "Character":
 		already_finished = true
 		
+		point_light_2d.visible = true
 		sprite_2d.visible = false
 		sprite_2d_2.visible = true
 		

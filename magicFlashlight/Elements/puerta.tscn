@@ -13,6 +13,7 @@ collision_mask = 5
 script = ExtResource("1_ah7sd")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=655343495]
+visible = false
 rotation = 1.5707964
 energy = 3.0
 texture = ExtResource("2_5gg5i")
@@ -31,7 +32,7 @@ region_rect = Rect2(208, 160, 16, 32)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1099112452]
 position = Vector2(3.333, 0)
-scale = Vector2(4.466666, 4.066665)
+scale = Vector2(-4.467, 4.067)
 texture = ExtResource("3_57eqg")
 region_enabled = true
 region_rect = Rect2(208, 160, 16, 32)
