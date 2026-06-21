@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bansknjvy3ays"]
 
-[ext_resource type="Script" uid="uid://chvh3pn8ott8o" path="res://UI/menu/menu_pause.gd" id="1_ev0o7"]
+[ext_resource type="Script" uid="uid://chvh3pn8ott8o" path="res://UI/menu/menu_pause/menu_pause.gd" id="1_ev0o7"]
 
 [node name="menu_pause" type="Control" unique_id=1026010211]
 process_mode = 2
@@ -52,6 +52,12 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
 theme_override_font_sizes/font_size = 33
 text = "CREDITS"
+
+[node name="save" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1158374749]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "SAVE"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=505502510]
 layout_mode = 0

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://nbhryltmisfi" path="res://espacio_levels/level1.tscn" id="1_rd7nm"]
 [ext_resource type="PackedScene" uid="uid://ifuqbbjqot2b" path="res://Elements/puerta.tscn" id="3_p6c0m"]
 [ext_resource type="PackedScene" uid="uid://djfcyfi7a5yn0" path="res://character.tscn" id="7_h7kka"]
-[ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause.tscn" id="7_p6c0m"]
-[ext_resource type="PackedScene" uid="uid://ctj0r4wrld2q7" path="res://UI/menu/menu_finished.tscn" id="8_cmcqe"]
+[ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause/menu_pause.tscn" id="7_p6c0m"]
+[ext_resource type="PackedScene" uid="uid://ctj0r4wrld2q7" path="res://UI/menu/menu_finished/menu_finished.tscn" id="8_cmcqe"]
 
 [node name="Nivel1" type="Node2D" unique_id=527181951]
 script = ExtResource("1_h7kka")

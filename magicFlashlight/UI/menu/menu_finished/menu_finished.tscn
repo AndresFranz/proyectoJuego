@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://ctj0r4wrld2q7"]
 
-[ext_resource type="Script" uid="uid://c6lss30swtrt7" path="res://UI/menu/menu_finished.gd" id="1_6pstj"]
+[ext_resource type="Script" uid="uid://c6lss30swtrt7" path="res://UI/menu/menu_finished/menu_finished.gd" id="1_6pstj"]
 
-[node name="MenuFinished" type="Control" unique_id=1048915644]
+[node name="MenuPostMain" type="Control" unique_id=1048915644]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,6 +39,12 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
 theme_override_font_sizes/font_size = 33
 text = "REPLAY"
+
+[node name="save" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1745511757]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "SAVE"
 
 [node name="menu" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=2116356084]
 layout_mode = 2
