@@ -12,7 +12,6 @@ func start_new() -> void:
 	var actual_info = JSON.stringify(dict)
 	var file = FileAccess.open_encrypted_with_pass("user://save.data", FileAccess.WRITE, "1234")
 	file.store_string(actual_info)
-	#get_tree().change_scene_to_packed(Levels[current_level])
 	file.close()
 	load_game()
 	get_tree().change_scene_to_packed(Levels[current_level])
