@@ -58,7 +58,6 @@ func player_die() -> void:
 	playback.travel("hurt")
 	await animation_tree.animation_finished
 	queue_free()
-	get_tree().reload_current_scene()
 
 
 func win_dance() -> void:

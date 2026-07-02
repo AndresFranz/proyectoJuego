@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dcpqmoelpxvwo"]
 
 [ext_resource type="Script" uid="uid://1nsdyk2d168q" path="res://UI/menu/menu_post_main/menu_post_main.gd" id="1_snqu7"]
-[ext_resource type="VideoStream" uid="uid://cjc8su7rylao3" path="res://assets/video fondo/portada.ogv" id="2_72df6"]
 
 [node name="MenuPostMain" type="Control" unique_id=406316603]
 layout_mode = 3
@@ -11,15 +10,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_snqu7")
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=503564953]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-scale = Vector2(0.6000058, 0.6000034)
-stream = ExtResource("2_72df6")
-autoplay = true
-loop = true
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1311120978]
 layout_mode = 1
