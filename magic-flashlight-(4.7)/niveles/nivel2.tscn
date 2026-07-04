@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://l7qevojg1dik"]
-
-[ext_resource type="Script" uid="uid://c0mvoc68cx5tl" path="res://niveles/levels.gd" id="1_8r2oi"]
-[ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause/menu_pause.tscn" id="2_3jvxc"]
-
-[node name="Nivel2" type="Node2D" unique_id=2141455554]
-script = ExtResource("1_8r2oi")
-
-[node name="menu_pause" parent="." unique_id=1026010211 instance=ExtResource("2_3jvxc")]

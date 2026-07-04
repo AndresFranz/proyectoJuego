@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://28be4b5dtibi"
-path="res://.godot/imported/Asset 99.png-1bae92bb1e5885a6f2f4f968928d9e26.ctex"
+uid="uid://ceuiucfg4d2dv"
+path="res://.godot/imported/Flashlight.png-43f0e3de80ad48011d6f8f11b4bed343.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/obstaculos/Demo/Demo/Asset 99.png"
-dest_files=["res://.godot/imported/Asset 99.png-1bae92bb1e5885a6f2f4f968928d9e26.ctex"]
+source_file="res://assets/Flashlight.png"
+dest_files=["res://.godot/imported/Flashlight.png-43f0e3de80ad48011d6f8f11b4bed343.ctex"]
 
 [params]
 
