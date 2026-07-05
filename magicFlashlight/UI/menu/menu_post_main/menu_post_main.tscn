@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1nsdyk2d168q" path="res://UI/menu/menu_post_main/menu_post_main.gd" id="1_snqu7"]
 [ext_resource type="VideoStream" uid="uid://cjc8su7rylao3" path="res://assets/video fondo/portada.ogv" id="2_72df6"]
+[ext_resource type="AudioStream" uid="uid://16pmhddmnhce" path="res://Music_&_SFX/kaden_cook-8-bit-dungeon-251388.mp3" id="3_qph5x"]
 
 [node name="MenuPostMain" type="Control" unique_id=406316603]
 layout_mode = 3
@@ -64,3 +65,8 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.36078432, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=200021694]
+stream = ExtResource("3_qph5x")
+volume_db = -20.0
+autoplay = true

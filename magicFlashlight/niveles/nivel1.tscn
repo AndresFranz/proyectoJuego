@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ifuqbbjqot2b" path="res://Elements/puerta.tscn" id="3_p6c0m"]
 [ext_resource type="PackedScene" uid="uid://djfcyfi7a5yn0" path="res://character.tscn" id="7_h7kka"]
 [ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause/menu_pause.tscn" id="7_p6c0m"]
+[ext_resource type="AudioStream" uid="uid://0v2dpbxtengo" path="res://Music_&_SFX/szegvaria-cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="7_rml80"]
 [ext_resource type="PackedScene" uid="uid://ctj0r4wrld2q7" path="res://UI/menu/menu_finished/menu_finished.tscn" id="8_cmcqe"]
 
 [node name="Nivel1" type="Node2D" unique_id=527181951]
@@ -20,6 +21,13 @@ menu_finalizacion = NodePath("../menu/MenuFinished")
 [node name="Character" parent="." unique_id=865322138 instance=ExtResource("7_h7kka")]
 position = Vector2(107, -68)
 collision_mask = 5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Character" unique_id=1357646391]
+position = Vector2(-356.66666, 226.66666)
+scale = Vector2(3.3333333, 3.3333333)
+stream = ExtResource("7_rml80")
+volume_db = -10.0
+autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
 color = Color(0.16924527, 0.1692453, 0.16924527, 1)
