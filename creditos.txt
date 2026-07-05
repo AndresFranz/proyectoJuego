@@ -3,3 +3,5 @@ TileSet -> Pixel Fantasy Caves by szadiart
 door -> Pixel Portal by lizcheong
 obstáculos -> 500+ Deadly traps + batch color replacer software by rehandev
 Linterna -> Flashlight 2d Pixel Sprite by Voopixel
+musica menu -> 8 Bit Dungeon by Kaden_Cook
+musica juego -> Cave temple - atmo orchestral drone thriller by szegvaria
