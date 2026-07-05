@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var Light = $PointLight2D
 @onready var Area = $Area2D
+@onready var flashlight_sound: AudioStreamPlayer2D = $flashlight_sound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,3 +16,4 @@ func _process(delta: float) -> void:
 		Light.visible = not Light.visible
 		Area.monitorable = not Area.monitorable
 		Area.monitoring = not Area.monitoring 
+		flashlight_sound.play()

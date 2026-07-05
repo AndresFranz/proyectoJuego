@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ck5qvuh76y62m" path="res://flashlight/linternaScript.gd" id="1_jlm58"]
 [ext_resource type="Texture2D" uid="uid://ceuiucfg4d2dv" path="res://assets/Flashlight.png" id="2_rksnn"]
 [ext_resource type="Texture2D" uid="uid://caaol3i4ceo6o" path="res://niveles/light_cone.png" id="3_rksnn"]
+[ext_resource type="AudioStream" uid="uid://b6nqtuyh6t1wk" path="res://Music_&_SFX/freesound_community-flashlight-clicking-on-105809.mp3" id="4_t2lw8"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rksnn"]
 polygon = PackedVector2Array(12, -10, 12, 9, -2, 0)
@@ -38,3 +39,7 @@ texture_scale = 0.28
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=2017978186]
 occluder = SubResource("OccluderPolygon2D_rksnn")
+
+[node name="flashlight_sound" type="AudioStreamPlayer2D" parent="." unique_id=1900755471]
+stream = ExtResource("4_t2lw8")
+pitch_scale = 1.5

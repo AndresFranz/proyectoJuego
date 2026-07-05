@@ -69,4 +69,5 @@ text = "back"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=200021694]
 stream = ExtResource("3_qph5x")
 volume_db = -20.0
+pitch_scale = 0.8
 autoplay = true

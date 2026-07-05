@@ -5,7 +5,8 @@ extends CharacterBody2D
 @onready var pivote: Node2D = $Pivote
 @onready var linterna: Node2D = $LinternaObject
 @onready var point_light: PointLight2D = $PointLight2D
-
+@onready var run_sound: AudioStreamPlayer2D = $run_sound
+@onready var jump_sound: AudioStreamPlayer2D = $jump_sound
 
 @export var SPEED = 180.0
 @export var JUMP_SPEED = 300.0
@@ -26,6 +27,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -JUMP_SPEED
+		jump_sound.play()
 
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
@@ -41,9 +43,16 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		if abs(velocity.x) > 10 or direction:
 			playback.travel("run")
+			
+			if not run_sound.playing:
+				run_sound.play()
 		else:
 			playback.travel("idle")
+			run_sound.stop()
 	else:
+		if run_sound.playing:
+			run_sound.stop()
+		
 		if velocity.y < 0:
 			playback.travel("jump")
 		else:
@@ -55,6 +64,10 @@ func player_die() -> void:
 		return
 
 	is_dead = true
+	
+	if run_sound.playing:
+		run_sound.stop()
+	
 	playback.travel("hurt")
 	await animation_tree.animation_finished
 	queue_free()
@@ -66,6 +79,10 @@ func win_dance() -> void:
 		return
 
 	has_won = true
+	
+	if run_sound.playing:
+		run_sound.stop()
+		
 	velocity = Vector2.ZERO
 
 	linterna.visible = false

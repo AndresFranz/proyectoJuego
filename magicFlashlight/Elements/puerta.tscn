@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b2lxd4niavln2" path="res://niveles/puerta.gd" id="1_ah7sd"]
 [ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="2_5gg5i"]
 [ext_resource type="Texture2D" uid="uid://due6ufk7a0d3n" path="res://assets/tileSets/Dungeon Tile Set.png" id="3_57eqg"]
+[ext_resource type="AudioStream" uid="uid://qkaldm4r81r3" path="res://Music_&_SFX/door_open.wav" id="4_5gg5i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8hoo"]
 size = Vector2(39.875, 127.125)
@@ -44,3 +45,6 @@ scale = Vector2(4.467, 4.067)
 texture = ExtResource("3_57eqg")
 region_enabled = true
 region_rect = Rect2(184, 160, 16, 32)
+
+[node name="sound" type="AudioStreamPlayer2D" parent="." unique_id=2056634950]
+stream = ExtResource("4_5gg5i")

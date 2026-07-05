@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ctj0r4wrld2q7"]
 
 [ext_resource type="Script" uid="uid://c6lss30swtrt7" path="res://UI/menu/menu_finished/menu_finished.gd" id="1_6pstj"]
+[ext_resource type="AudioStream" uid="uid://db04g0u0uq2se" path="res://Music_&_SFX/music_box_mystery.wav" id="2_2kx33"]
 
 [node name="MenuPostMain" type="Control" unique_id=1048915644]
 layout_mode = 3
@@ -67,3 +68,7 @@ offset_bottom = 83.0
 theme_override_colors/default_color = Color(0.1284591, 0.12568131, 1, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "WINNER"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2082522121]
+stream = ExtResource("2_2kx33")
+autoplay = true

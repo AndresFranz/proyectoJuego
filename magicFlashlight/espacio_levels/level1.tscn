@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://ckmdafwe6pqpj" path="res://espacio_levels/bola.gd" id="9_btexd"]
 [ext_resource type="Texture2D" uid="uid://b8af127uwyvjc" path="res://assets/obstaculos/Demo/Demo/Asset 7.png" id="10_xp57k"]
 [ext_resource type="Texture2D" uid="uid://ifubmntssrfw" path="res://assets/obstaculos/Demo/Demo/Asset 24.png" id="11_fed81"]
+[ext_resource type="AudioStream" uid="uid://cb4opcg0wioa4" path="res://Music_&_SFX/dragon-studio-heavy-whoosh-06-414584.mp3" id="12_xp57k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3u0b"]
 texture = ExtResource("1_b3u0b")
@@ -2097,3 +2098,7 @@ texture = ExtResource("10_xp57k")
 position = Vector2(0, 53)
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("11_fed81")
+
+[node name="sound" type="AudioStreamPlayer2D" parent="bola" unique_id=317633646]
+stream = ExtResource("12_xp57k")
+max_distance = 500.0
