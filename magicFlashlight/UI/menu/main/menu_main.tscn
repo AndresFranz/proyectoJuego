@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d5bvpc8kqtsa" path="res://UI/menu/main/menu_main.gd" id="1_wt0v1"]
 [ext_resource type="VideoStream" uid="uid://cjc8su7rylao3" path="res://assets/video fondo/portada.ogv" id="2_lwoe3"]
 [ext_resource type="AudioStream" uid="uid://16pmhddmnhce" path="res://Music_&_SFX/kaden_cook-8-bit-dungeon-251388.mp3" id="3_iosdv"]
+[ext_resource type="PackedScene" uid="uid://dcpqmoelpxvwo" path="res://UI/menu/menu_post_main/menu_post_main.tscn" id="4_mpp21"]
 
 [node name="MainMenu" type="Control" unique_id=406316603]
 layout_mode = 3
@@ -87,3 +88,7 @@ stream = ExtResource("3_iosdv")
 volume_db = -20.0
 pitch_scale = 0.8
 autoplay = true
+
+[node name="MenuPostMain" parent="." unique_id=1423815602 instance=ExtResource("4_mpp21")]
+visible = false
+layout_mode = 1
