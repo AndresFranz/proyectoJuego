@@ -1,6 +1,5 @@
 Fonts -> DUNGEON.mode by datagoblin
 TileSet -> Pixel Fantasy Caves by szadiart
-door -> Pixel Portal by lizcheong
 obstáculos -> 500+ Deadly traps + batch color replacer software by rehandev
 Linterna -> Flashlight 2d Pixel Sprite by Voopixel
 
@@ -13,3 +12,5 @@ saltar -> Phoenix_Connection_Brazil
 correr -> BlenderTimer
 linterna -> freesound_community
 ganar -> Chequered Ink
+puerta -> Chequered Ink
+morir -> Stepir44

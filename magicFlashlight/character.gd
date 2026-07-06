@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var point_light: PointLight2D = $PointLight2D
 @onready var run_sound: AudioStreamPlayer2D = $run_sound
 @onready var jump_sound: AudioStreamPlayer2D = $jump_sound
+@onready var die_sound: AudioStreamPlayer2D = $die_sound
 
 @export var SPEED = 180.0
 @export var JUMP_SPEED = 300.0
@@ -67,6 +68,8 @@ func player_die() -> void:
 	
 	if run_sound.playing:
 		run_sound.stop()
+	
+	die_sound.play()
 	
 	playback.travel("hurt")
 	await animation_tree.animation_finished

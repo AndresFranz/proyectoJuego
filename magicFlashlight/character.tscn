@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bxaush0av8s31" path="res://components/heartbox.gd" id="8_jb3kq"]
 [ext_resource type="AudioStream" uid="uid://jvvlsid531at" path="res://Music_&_SFX/blendertimer-person-running-loop-245173.mp3" id="9_qi5as"]
 [ext_resource type="AudioStream" uid="uid://d2xevqvnd3qb3" path="res://Music_&_SFX/jump.mp3" id="10_jb3kq"]
+[ext_resource type="AudioStream" uid="uid://c1j1g7mwm4ky1" path="res://Music_&_SFX/stepir44-hurt-sound-435314.mp3" id="11_c1b4b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vu45j"]
 radius = 11.0
@@ -499,3 +500,6 @@ pitch_scale = 0.9
 [node name="jump_sound" type="AudioStreamPlayer2D" parent="." unique_id=1740801412]
 stream = ExtResource("10_jb3kq")
 volume_db = -10.0
+
+[node name="die_sound" type="AudioStreamPlayer2D" parent="." unique_id=540698517]
+stream = ExtResource("11_c1b4b")
