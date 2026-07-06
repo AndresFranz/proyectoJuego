@@ -83,12 +83,19 @@ func win_dance() -> void:
 
 	has_won = true
 	
-	if run_sound.playing:
-		run_sound.stop()
-		
-	velocity = Vector2.ZERO
-
 	linterna.visible = false
 	point_light.visible = false
+	
+	if run_sound.playing:
+		run_sound.stop()
+	
+	velocity.x = 0
 
+	while not is_on_floor():
+		velocity.y += get_gravity().y * get_physics_process_delta_time()
+		move_and_slide()
+		playback.travel("fall")
+		await get_tree().physics_frame
+
+	velocity = Vector2.ZERO
 	playback.travel("win")
