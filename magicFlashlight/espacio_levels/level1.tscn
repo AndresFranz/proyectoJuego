@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://cluen4qwx5x1k" path="res://espacio_levels/direccion.gd" id="7_pngbl"]
 [ext_resource type="Texture2D" uid="uid://28be4b5dtibi" path="res://assets/obstaculos/Demo/Demo/Asset 99.png" id="8_f2gkp"]
 [ext_resource type="Script" uid="uid://ckmdafwe6pqpj" path="res://espacio_levels/bola.gd" id="9_btexd"]
+[ext_resource type="AudioStream" uid="uid://dxvo4rq4w56uj" path="res://Music_&_SFX/ceton-saw-164081 (mp3cut.net).mp3" id="9_qejri"]
 [ext_resource type="Texture2D" uid="uid://b8af127uwyvjc" path="res://assets/obstaculos/Demo/Demo/Asset 7.png" id="10_xp57k"]
 [ext_resource type="Texture2D" uid="uid://ifubmntssrfw" path="res://assets/obstaculos/Demo/Demo/Asset 24.png" id="11_fed81"]
 [ext_resource type="AudioStream" uid="uid://cb4opcg0wioa4" path="res://Music_&_SFX/dragon-studio-heavy-whoosh-06-414584.mp3" id="12_xp57k"]
@@ -1521,6 +1522,11 @@ script = ExtResource("7_pngbl")
 position = Vector2(-6.5, 8)
 shape = SubResource("RectangleShape2D_f2gkp")
 
+[node name="sound" type="AudioStreamPlayer2D" parent="sierra1" unique_id=1381744204]
+stream = ExtResource("9_qejri")
+volume_db = -20.0
+max_distance = 300.0
+
 [node name="sierra2" type="StaticBody2D" parent="." unique_id=643065843]
 position = Vector2(2962, -78)
 script = ExtResource("5_27qiv")
@@ -1566,6 +1572,11 @@ script = ExtResource("7_pngbl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sierra2/direccion" unique_id=1755804356]
 position = Vector2(-7.5, 7)
 shape = SubResource("RectangleShape2D_f2gkp")
+
+[node name="sound" type="AudioStreamPlayer2D" parent="sierra2" unique_id=963031376]
+stream = ExtResource("9_qejri")
+volume_db = -20.0
+max_distance = 300.0
 
 [node name="sueloPermanente" type="StaticBody2D" parent="." unique_id=148192307]
 collision_layer = 3
