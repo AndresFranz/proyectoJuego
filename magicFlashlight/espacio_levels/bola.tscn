@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://3hmwrl5k8nhp"]
+
+[ext_resource type="Script" uid="uid://ckmdafwe6pqpj" path="res://espacio_levels/bola.gd" id="1_2uka6"]
+[ext_resource type="Script" uid="uid://2iw6mx0i5bxu" path="res://components/hitbox.gd" id="2_u4mwh"]
+[ext_resource type="Texture2D" uid="uid://b8af127uwyvjc" path="res://assets/obstaculos/Demo/Demo/Asset 7.png" id="3_yy62a"]
+[ext_resource type="Texture2D" uid="uid://ifubmntssrfw" path="res://assets/obstaculos/Demo/Demo/Asset 24.png" id="4_dld7p"]
+[ext_resource type="AudioStream" uid="uid://cb4opcg0wioa4" path="res://Music_&_SFX/dragon-studio-heavy-whoosh-06-414584.mp3" id="5_u4mwh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ot4un"]
+radius = 17.0
+
+[node name="Bola" type="Node2D" unique_id=1387545563]
+script = ExtResource("1_2uka6")
+
+[node name="areaKill" type="Area2D" parent="." unique_id=427111869]
+position = Vector2(0, 53)
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("2_u4mwh")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areaKill" unique_id=309117712]
+shape = SubResource("CircleShape2D_ot4un")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1505338433]
+position = Vector2(-1.6852052e-08, 26.38553)
+rotation = 1.5707964
+scale = Vector2(0.035866063, 0.0135372365)
+texture = ExtResource("3_yy62a")
+
+[node name="Asset24" type="Sprite2D" parent="." unique_id=1158950513]
+position = Vector2(0, 53)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("4_dld7p")
+
+[node name="sound" type="AudioStreamPlayer2D" parent="." unique_id=875398734]
+stream = ExtResource("5_u4mwh")
+volume_db = -10.0
+max_distance = 500.0
