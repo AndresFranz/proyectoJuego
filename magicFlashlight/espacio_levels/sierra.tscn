@@ -1,54 +1,10 @@
 [gd_scene format=3 uid="uid://cjxdnyskeqiov"]
 
-[ext_resource type="Script" uid="uid://uw4h842e6224" path="res://espacio_levels/sierra.gd" id="1_epatw"]
-[ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://Blocks/LightBlock/area_light.gd" id="2_med1n"]
-[ext_resource type="Script" uid="uid://2iw6mx0i5bxu" path="res://components/hitbox.gd" id="3_c5pq1"]
 [ext_resource type="Texture2D" uid="uid://drg42cab1500x" path="res://assets/obstaculos/Demo/Demo/Asset 131.png" id="4_jt5rw"]
-[ext_resource type="Script" uid="uid://cluen4qwx5x1k" path="res://espacio_levels/direccion.gd" id="5_mfbgr"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_g228f"]
-radius = 19.525623
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3b6j"]
-size = Vector2(41, 12)
 
 [node name="Sierra" type="Node2D" unique_id=1269812321]
-script = ExtResource("1_epatw")
-
-[node name="AreaLight" type="Area2D" parent="." unique_id=1644404345]
-light_mask = 4
-visibility_layer = 2
-position = Vector2(1, 0)
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("2_med1n")
-metadata/_edit_lock_ = true
-
-[node name="collisionLight" type="CollisionShape2D" parent="AreaLight" unique_id=1369335620]
-position = Vector2(-7, 17)
-shape = SubResource("CircleShape2D_g228f")
-
-[node name="areaKill" type="Area2D" parent="." unique_id=715606086]
-collision_layer = 16
-collision_mask = 32
-script = ExtResource("3_c5pq1")
-metadata/_edit_lock_ = true
-
-[node name="collisionKill" type="CollisionShape2D" parent="areaKill" unique_id=1550995923]
-position = Vector2(-6, 17)
-shape = SubResource("CircleShape2D_g228f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1648413104]
 position = Vector2(-6, 17.000004)
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("4_jt5rw")
-
-[node name="direccion" type="Area2D" parent="." unique_id=278149366]
-position = Vector2(1.5, 0.5)
-collision_layer = 2
-collision_mask = 2
-script = ExtResource("5_mfbgr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="direccion" unique_id=697370374]
-position = Vector2(-7.5, 7)
-shape = SubResource("RectangleShape2D_d3b6j")
