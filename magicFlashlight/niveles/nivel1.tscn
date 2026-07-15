@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause/menu_pause.tscn" id="7_p6c0m"]
 [ext_resource type="PackedScene" uid="uid://ctj0r4wrld2q7" path="res://UI/menu/menu_finished/menu_finished.tscn" id="8_cmcqe"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2o2jj"]
+light_mode = 1
+
 [node name="Nivel1" type="Node2D" unique_id=527181951]
 script = ExtResource("1_h7kka")
 
@@ -18,7 +21,7 @@ position = Vector2(4388, -279)
 menu_finalizacion = NodePath("../menu/MenuFinished")
 
 [node name="Character" parent="." unique_id=865322138 instance=ExtResource("7_h7kka")]
-position = Vector2(107, -68)
+position = Vector2(-148, -61.000004)
 collision_mask = 5
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
@@ -33,3 +36,30 @@ visible = false
 [node name="MenuFinished" parent="menu" unique_id=1048915644 instance=ExtResource("8_cmcqe")]
 process_mode = 2
 visible = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=414893178]
+material = SubResource("CanvasItemMaterial_2o2jj")
+offset_left = 348.0
+offset_top = -142.0
+offset_right = 492.0
+offset_bottom = -109.0
+theme_override_font_sizes/normal_font_size = 8
+text = "Los objetos encantados (amarillos) desaparecen cuando la luz no los toca"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1938572182]
+material = SubResource("CanvasItemMaterial_2o2jj")
+offset_left = -130.0
+offset_top = -116.0
+offset_right = 17.0
+offset_bottom = -76.0
+theme_override_font_sizes/normal_font_size = 8
+text = "Esta muy oscuro... Enciende la linterna con Click Izquierdo."
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1678386951]
+material = SubResource("CanvasItemMaterial_2o2jj")
+offset_left = 1062.0
+offset_top = -162.0
+offset_right = 1206.0
+offset_bottom = -125.0
+theme_override_font_sizes/normal_font_size = 8
+text = "Para usar los objetos encantados, alumbralos directactemente."

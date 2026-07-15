@@ -1,0 +1,39 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://espacio_levels/bola.gd" id="1_bola"]
+[ext_resource type="Script" path="res://components/hitbox.gd" id="2_hitbox"]
+[ext_resource type="Texture2D" path="res://assets/obstaculos/Demo/Demo/Asset 7.png" id="3_chain"]
+[ext_resource type="Texture2D" path="res://assets/obstaculos/Demo/Demo/Asset 24.png" id="4_weight"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_main"]
+radius = 52.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kill"]
+radius = 22.0
+
+[node name="Pendulo" type="Area2D"]
+script = ExtResource("1_bola")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 22)
+shape = SubResource("CircleShape2D_main")
+
+[node name="areaKill" type="Area2D" parent="."]
+position = Vector2(0, 53)
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("2_hitbox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="areaKill"]
+shape = SubResource("CircleShape2D_kill")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 26)
+rotation = 1.5707964
+scale = Vector2(0.035, 0.014)
+texture = ExtResource("3_chain")
+
+[node name="Asset24" type="Sprite2D" parent="."]
+position = Vector2(0, 53)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("4_weight")
