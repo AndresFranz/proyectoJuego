@@ -2,8 +2,38 @@
 
 [ext_resource type="Script" uid="uid://c0mvoc68cx5tl" path="res://niveles/levels.gd" id="1_8r2oi"]
 [ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause/menu_pause.tscn" id="2_3jvxc"]
+[ext_resource type="PackedScene" uid="uid://ifuqbbjqot2b" path="res://Elements/puerta.tscn" id="3_0b5iq"]
+[ext_resource type="PackedScene" uid="uid://brailurav57s" path="res://espacio_levels/level2.tscn" id="3_8sdon"]
+[ext_resource type="PackedScene" uid="uid://djfcyfi7a5yn0" path="res://character.tscn" id="4_n84vi"]
+[ext_resource type="PackedScene" uid="uid://ctj0r4wrld2q7" path="res://UI/menu/menu_finished/menu_finished.tscn" id="6_cy23h"]
+[ext_resource type="AudioStream" uid="uid://0v2dpbxtengo" path="res://Music_&_SFX/szegvaria-cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="7_gendg"]
 
 [node name="Nivel2" type="Node2D" unique_id=2141455554]
 script = ExtResource("1_8r2oi")
 
-[node name="menu_pause" parent="." unique_id=1026010211 instance=ExtResource("2_3jvxc")]
+[node name="level2" parent="." unique_id=585182787 instance=ExtResource("3_8sdon")]
+
+[node name="puerta" parent="." unique_id=211982980 node_paths=PackedStringArray("menu_finalizacion") instance=ExtResource("3_0b5iq")]
+position = Vector2(5516, 540)
+menu_finalizacion = NodePath("")
+
+[node name="Character" parent="." unique_id=865322138 instance=ExtResource("4_n84vi")]
+position = Vector2(-354, 597)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1139072933]
+color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+metadata/_edit_lock_ = true
+
+[node name="menu" type="CanvasLayer" parent="." unique_id=399441484]
+
+[node name="menu_pause" parent="menu" unique_id=1026010211 instance=ExtResource("2_3jvxc")]
+visible = false
+
+[node name="MenuFinished" parent="menu" unique_id=1048915644 instance=ExtResource("6_cy23h")]
+process_mode = 2
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=18620812]
+stream = ExtResource("7_gendg")
+volume_db = -15.0
+autoplay = true

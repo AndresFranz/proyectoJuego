@@ -24,6 +24,7 @@ func back_to_main() -> void:
 
 func next_level() -> void:
 	current_level += 1
+	get_tree().paused = !get_tree().paused
 	if current_level < Levels.size():
 		get_tree().change_scene_to_packed(Levels[current_level])
 	else:
