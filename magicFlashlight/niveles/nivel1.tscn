@@ -7,23 +7,29 @@
 [ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause/menu_pause.tscn" id="7_p6c0m"]
 [ext_resource type="AudioStream" uid="uid://0v2dpbxtengo" path="res://Music_&_SFX/szegvaria-cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="7_rml80"]
 [ext_resource type="PackedScene" uid="uid://ctj0r4wrld2q7" path="res://UI/menu/menu_finished/menu_finished.tscn" id="8_cmcqe"]
+[ext_resource type="Texture2D" uid="uid://dccptrxadpwry" path="res://niveles/tabla_horizontal.png" id="9_mncda"]
+[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="10_wg7mc"]
 
 [node name="Nivel1" type="Node2D" unique_id=527181951]
 script = ExtResource("1_h7kka")
+metadata/_edit_lock_ = true
 
 [node name="Level1" parent="." unique_id=891566079 instance=ExtResource("1_rd7nm")]
 position = Vector2(50, -3)
+metadata/_edit_lock_ = true
 
 [node name="puerta" parent="." unique_id=211982980 node_paths=PackedStringArray("menu_finalizacion") instance=ExtResource("3_p6c0m")]
 position = Vector2(4388, -279)
 menu_finalizacion = NodePath("../menu/MenuFinished")
+metadata/_edit_lock_ = true
 
 [node name="Character" parent="." unique_id=865322138 instance=ExtResource("7_h7kka")]
 position = Vector2(107, -68)
 collision_mask = 5
+metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
-color = Color(0.16924527, 0.1692453, 0.16924527, 1)
+color = Color(0.21950114, 0.21950099, 0.21950093, 1)
 metadata/_edit_lock_ = true
 
 [node name="menu" type="CanvasLayer" parent="." unique_id=1761207640]
@@ -39,3 +45,225 @@ visible = false
 stream = ExtResource("7_rml80")
 volume_db = -15.0
 autoplay = true
+
+[node name="Letreros" type="Node2D" parent="." unique_id=105737911]
+light_mask = 2
+position = Vector2(418, -52)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="Letreros" unique_id=199925918]
+light_mask = 2
+position = Vector2(11.648445, -50.445313)
+scale = Vector2(0.29594734, 0.27580917)
+texture = ExtResource("9_mncda")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Letreros" unique_id=943882511]
+light_mask = 2
+position = Vector2(12.000008, -50.000004)
+scale = Vector2(0.78857416, 0.36669922)
+range_item_cull_mask = 2
+texture = ExtResource("10_wg7mc")
+
+[node name="Label" type="Label" parent="Letreros" unique_id=2027993668]
+light_mask = 2
+offset_left = -34.0
+offset_top = -64.0
+offset_right = 54.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 6
+text = "apaga linterna
+para traspasar 
+pared"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Letreros2" type="Node2D" parent="." unique_id=1184136704]
+light_mask = 2
+position = Vector2(1007, -69)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="Letreros2" unique_id=1357771511]
+light_mask = 2
+position = Vector2(35.14844, -50.445313)
+scale = Vector2(0.44282234, 0.27580917)
+texture = ExtResource("9_mncda")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Letreros2" unique_id=791742720]
+light_mask = 2
+position = Vector2(32.99998, -51)
+scale = Vector2(1.2832031, 0.57421875)
+range_item_cull_mask = 2
+texture = ExtResource("10_wg7mc")
+
+[node name="Label" type="Label" parent="Letreros2" unique_id=12152860]
+light_mask = 2
+offset_left = -34.0
+offset_top = -64.0
+offset_right = 100.0
+offset_bottom = -39.0
+theme_override_font_sizes/font_size = 6
+text = "apunta hacia la 
+escalera con 
+la linterna para subirla"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Letreros3" type="Node2D" parent="." unique_id=1779198460]
+light_mask = 2
+position = Vector2(1995, -304)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="Letreros3" unique_id=172083250]
+light_mask = 2
+position = Vector2(35.14844, -50.445313)
+scale = Vector2(0.44282234, 0.27580917)
+texture = ExtResource("9_mncda")
+metadata/_edit_lock_ = true
+
+[node name="luz" type="PointLight2D" parent="Letreros3" unique_id=1581166962]
+light_mask = 2
+position = Vector2(30.000002, -50.000015)
+scale = Vector2(1.1386721, 0.4140624)
+range_item_cull_mask = 2
+texture = ExtResource("10_wg7mc")
+
+[node name="Label" type="Label" parent="Letreros3" unique_id=12690307]
+light_mask = 2
+offset_left = -34.0
+offset_top = -64.0
+offset_right = 100.0
+offset_bottom = -39.0
+theme_override_font_sizes/font_size = 6
+text = "Ilumina sobre
+ el obstáculo
+para avanzar sobre el"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Letreros4" type="Node2D" parent="." unique_id=933183494]
+light_mask = 2
+position = Vector2(1534, -314)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="Letreros4" unique_id=1732771017]
+light_mask = 2
+position = Vector2(35.14844, -50.445313)
+scale = Vector2(0.44282234, 0.27580917)
+texture = ExtResource("9_mncda")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Letreros4" unique_id=151962076]
+light_mask = 2
+position = Vector2(28.999985, -52.000008)
+scale = Vector2(1.2226554, 0.37890628)
+range_item_cull_mask = 2
+texture = ExtResource("10_wg7mc")
+
+[node name="Label" type="Label" parent="Letreros4" unique_id=808718371]
+light_mask = 2
+offset_left = -34.0
+offset_top = -64.0
+offset_right = 100.0
+offset_bottom = -39.0
+theme_override_font_sizes/font_size = 6
+text = "Cuidado!
+Sierras y péndulos
+siempre dañan"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Letreros5" type="Node2D" parent="." unique_id=454297573]
+light_mask = 2
+position = Vector2(79, -59)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="Letreros5" unique_id=2056010867]
+light_mask = 2
+position = Vector2(35.000004, -55)
+scale = Vector2(0.44282234, 0.2400949)
+texture = ExtResource("9_mncda")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Letreros5" unique_id=213897567]
+light_mask = 8
+position = Vector2(29.000004, -54.999996)
+scale = Vector2(0.9863282, 0.2236328)
+range_item_cull_mask = 2
+texture = ExtResource("10_wg7mc")
+
+[node name="Label" type="Label" parent="Letreros5" unique_id=15014179]
+light_mask = 2
+offset_left = -34.0
+offset_top = -64.0
+offset_right = 100.0
+offset_bottom = -39.0
+theme_override_font_sizes/font_size = 6
+text = "Enciende/Apaga linterna
+con la tecla Q"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Letreros6" type="Node2D" parent="." unique_id=1212704373]
+light_mask = 2
+position = Vector2(238, -34)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="Letreros6" unique_id=520778118]
+light_mask = 2
+position = Vector2(-27.999996, -39.000004)
+scale = Vector2(0.118286096, 0.128976)
+texture = ExtResource("9_mncda")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Letreros6" unique_id=1110830110]
+light_mask = 2
+position = Vector2(-27.000004, -38.999996)
+scale = Vector2(0.38476554, 0.16406251)
+range_item_cull_mask = 2
+texture = ExtResource("10_wg7mc")
+
+[node name="Label" type="Label" parent="Letreros6" unique_id=1550009143]
+light_mask = 2
+offset_left = -46.0
+offset_top = -45.0
+offset_right = -11.0
+offset_bottom = -34.0
+theme_override_font_sizes/font_size = 6
+text = "-->"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Letreros7" type="Node2D" parent="." unique_id=2042739883]
+light_mask = 2
+position = Vector2(271, -62)
+
+[node name="TablaHorizontal" type="Sprite2D" parent="Letreros7" unique_id=919712408]
+light_mask = 2
+position = Vector2(11.648445, -50.445313)
+scale = Vector2(0.29594734, 0.27580917)
+texture = ExtResource("9_mncda")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Letreros7" unique_id=491640272]
+light_mask = 2
+position = Vector2(12.000008, -50.000004)
+scale = Vector2(0.78857416, 0.36669922)
+range_item_cull_mask = 2
+texture = ExtResource("10_wg7mc")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Letreros7" unique_id=1873531730]
+light_mask = 2
+offset_left = -34.0
+offset_top = -64.0
+offset_right = 54.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 6
+text = "la linterna se
+apunta con 
+el mouse"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true

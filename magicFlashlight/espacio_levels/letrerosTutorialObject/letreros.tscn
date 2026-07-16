@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dnr4k2cuknb1r"]
+
+[ext_resource type="Texture2D" uid="uid://x5p2xamufqyh" path="res://niveles/palito_vertical.png" id="1_svwc7"]
+[ext_resource type="Texture2D" uid="uid://dccptrxadpwry" path="res://niveles/tabla_horizontal.png" id="2_qs3hh"]
+[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="3_qs3hh"]
+
+[node name="Letreros" type="Node2D" unique_id=105737911]
+position = Vector2(-1, -1)
+
+[node name="PalitoVertical" type="Sprite2D" parent="." unique_id=936018868]
+position = Vector2(0.99999905, -19)
+scale = Vector2(0.1328125, 0.11008521)
+texture = ExtResource("1_svwc7")
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="." unique_id=199925918]
+position = Vector2(0.9999962, -51)
+scale = Vector2(0.22939456, 0.26590404)
+texture = ExtResource("2_qs3hh")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=943882511]
+position = Vector2(-4.7683716e-07, -52.75)
+scale = Vector2(0.265625, 0.09179688)
+texture = ExtResource("3_qs3hh")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." unique_id=2027993668]
+offset_left = -34.0
+offset_top = -64.0
+offset_right = 34.0
+offset_bottom = -40.0
+metadata/_edit_lock_ = true
