@@ -13,9 +13,8 @@ script = ExtResource("1_8r2oi")
 
 [node name="level2" parent="." unique_id=585182787 instance=ExtResource("3_8sdon")]
 
-[node name="puerta" parent="." unique_id=211982980 node_paths=PackedStringArray("menu_finalizacion") instance=ExtResource("3_0b5iq")]
+[node name="puerta" parent="." unique_id=211982980 instance=ExtResource("3_0b5iq")]
 position = Vector2(5516, 540)
-menu_finalizacion = NodePath("")
 
 [node name="Character" parent="." unique_id=865322138 instance=ExtResource("4_n84vi")]
 position = Vector2(-354, 597)

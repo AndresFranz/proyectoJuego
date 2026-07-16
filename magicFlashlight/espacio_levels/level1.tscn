@@ -8,7 +8,6 @@
 [ext_resource type="TileSet" uid="uid://bilfojncn5esi" path="res://tile_set_1.tres" id="5_fed81"]
 [ext_resource type="Texture2D" uid="uid://drg42cab1500x" path="res://assets/obstaculos/Demo/Demo/Asset 131.png" id="6_pngbl"]
 [ext_resource type="Script" uid="uid://cluen4qwx5x1k" path="res://espacio_levels/direccion.gd" id="7_pngbl"]
-[ext_resource type="Texture2D" uid="uid://28be4b5dtibi" path="res://assets/obstaculos/Demo/Demo/Asset 99.png" id="8_f2gkp"]
 [ext_resource type="Script" uid="uid://ckmdafwe6pqpj" path="res://espacio_levels/bola.gd" id="9_btexd"]
 [ext_resource type="AudioStream" uid="uid://dxvo4rq4w56uj" path="res://Music_&_SFX/ceton-saw-164081 (mp3cut.net).mp3" id="9_qejri"]
 [ext_resource type="Texture2D" uid="uid://b8af127uwyvjc" path="res://assets/obstaculos/Demo/Demo/Asset 7.png" id="10_xp57k"]
@@ -1196,13 +1195,19 @@ size = Vector2(66, 46)
 size = Vector2(725.5, 13.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0ras"]
-size = Vector2(683.5, 38)
+size = Vector2(683.5, 2)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_f2gkp"]
 b = Vector2(0, 52)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qejri"]
 radius = 17.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fed81"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qejri"]
+normal = Vector2(-1, 0)
 
 [node name="Level1" type="Node2D" unique_id=891566079]
 metadata/_edit_vertical_guides_ = [-63.0]
@@ -1604,42 +1609,12 @@ tile_set = SubResource("TileSet_ctxqh")
 position = Vector2(2327, 419.75)
 shape = SubResource("RectangleShape2D_uslt4")
 
-[node name="Sprite2D" type="Sprite2D" parent="puas" unique_id=1729557605]
-position = Vector2(2000, 390)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_f2gkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="puas/Sprite2D" unique_id=138386018]
-position = Vector2(800.0006, 3.0517578e-05)
-texture = ExtResource("8_f2gkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="puas/Sprite2D/Sprite2D" unique_id=596484216]
-position = Vector2(800.0006, 3.0517578e-05)
-texture = ExtResource("8_f2gkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="puas/Sprite2D/Sprite2D/Sprite2D" unique_id=1981218087]
-position = Vector2(800.0006, 3.0517578e-05)
-texture = ExtResource("8_f2gkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="puas/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1461512383]
-position = Vector2(800.0006, 3.0517578e-05)
-texture = ExtResource("8_f2gkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="puas/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1009884293]
-position = Vector2(800.0006, 3.0517578e-05)
-texture = ExtResource("8_f2gkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="puas/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=375578776]
-position = Vector2(800.0006, 3.0517578e-05)
-texture = ExtResource("8_f2gkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="puas/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1734843653]
-position = Vector2(800.0006, 3.0517578e-05)
-texture = ExtResource("8_f2gkp")
-
-[node name="Sprite2D" type="Sprite2D" parent="puas/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1524855307]
-position = Vector2(800.0006, 3.0517578e-05)
-texture = ExtResource("8_f2gkp")
+[node name="textura" type="TileMapLayer" parent="puas" unique_id=1427190784]
+modulate = Color(1, 0.6509804, 0, 1)
+use_parent_material = true
+position = Vector2(2, -204)
+tile_map_data = PackedByteArray("AAB6ACYAAAAFAA4AAAB7ACYAAAACAA4AAAB8ACYAAAAGAA4AAAB9ACYAAAADAA4AAAB+ACYAAAAFAA4AAAB/ACYAAAAGAA4AAACAACYAAAADAA4AAACBACYAAAABAA4AAACCACYAAAAFAA4AAACDACYAAAAGAA4AAACEACYAAAAFAA4AAACFACYAAAAEAA4AAACGACYAAAAFAA4AAACHACYAAAAFAA4AAACIACYAAAAGAA4AAACJACYAAAACAA4AAACKACYAAAAGAA4AAACLACYAAAABAA4AAACMACYAAAADAA4AAACNACYAAAAGAA4AAACOACYAAAAEAA4AAACPACYAAAAFAA4AAACQACYAAAADAA4AAACRACYAAAAEAA4AAACSACYAAAABAA4AAACTACYAAAAGAA4AAACUACYAAAAEAA4AAACVACYAAAAEAA4AAACWACYAAAAGAA4AAACXACYAAAAGAA4AAACYACYAAAAEAA4AAACZACYAAAAGAA4AAACaACYAAAABAA4AAACbACYAAAAGAA4AAACcACYAAAAEAA4AAACdACYAAAAFAA4AAACeACYAAAACAA4AAACfACYAAAAEAA4AAACgACYAAAAGAA4AAAChACYAAAAGAA4AAACiACYAAAABAA4AAACjACYAAAACAA4AAACkACYAAAADAA4AAAClACYAAAADAA4AAACmACYAAAABAA4AAACnACYAAAAEAA4AAAA=")
+tile_set = ExtResource("5_fed81")
 
 [node name="areaKill" type="Area2D" parent="puas" unique_id=789851896]
 collision_layer = 16
@@ -1648,7 +1623,7 @@ script = ExtResource("3_knvhy")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="puas/areaKill" unique_id=1378727976]
-position = Vector2(2306, 395)
+position = Vector2(2306, 413)
 shape = SubResource("RectangleShape2D_h0ras")
 
 [node name="bola" type="Area2D" parent="." unique_id=792401976]
@@ -1682,3 +1657,13 @@ texture = ExtResource("11_fed81")
 [node name="sound" type="AudioStreamPlayer2D" parent="bola" unique_id=317633646]
 stream = ExtResource("12_xp57k")
 max_distance = 500.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1509670470]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=448601669]
+position = Vector2(-549, -77)
+shape = SubResource("WorldBoundaryShape2D_fed81")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1872126586]
+position = Vector2(4786, -227)
+shape = SubResource("WorldBoundaryShape2D_qejri")
