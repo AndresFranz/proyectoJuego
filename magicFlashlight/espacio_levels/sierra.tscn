@@ -1,10 +1,32 @@
 [gd_scene format=3 uid="uid://cjxdnyskeqiov"]
 
+[ext_resource type="Script" uid="uid://cwer3l68thhsv" path="res://espacio_levels/sierraFija.gd" id="1_46ano"]
+[ext_resource type="Script" uid="uid://2iw6mx0i5bxu" path="res://components/hitbox.gd" id="2_med1n"]
 [ext_resource type="Texture2D" uid="uid://drg42cab1500x" path="res://assets/obstaculos/Demo/Demo/Asset 131.png" id="4_jt5rw"]
+[ext_resource type="AudioStream" uid="uid://dxvo4rq4w56uj" path="res://Music_&_SFX/ceton-saw-164081 (mp3cut.net).mp3" id="5_jt5rw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jsc1l"]
+radius = 18.027756
 
 [node name="Sierra" type="Node2D" unique_id=1269812321]
+script = ExtResource("1_46ano")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1648413104]
 position = Vector2(-6, 17.000004)
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("4_jt5rw")
+
+[node name="Areakill" type="Area2D" parent="." unique_id=981741116]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("2_med1n")
+metadata/_custom_type_script = "uid://2iw6mx0i5bxu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areakill" unique_id=1303109803]
+position = Vector2(-6, 17)
+shape = SubResource("CircleShape2D_jsc1l")
+
+[node name="sound" type="AudioStreamPlayer2D" parent="." unique_id=1606810889]
+stream = ExtResource("5_jt5rw")
+volume_db = -20.0
+max_distance = 300.0

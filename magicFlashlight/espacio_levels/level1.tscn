@@ -1485,19 +1485,6 @@ script = ExtResource("5_27qiv")
 position = Vector2(-6, 17)
 shape = SubResource("CircleShape2D_uslt4")
 
-[node name="AreaLight" type="Area2D" parent="sierra1" unique_id=1911638230]
-light_mask = 4
-visibility_layer = 2
-position = Vector2(1, 0)
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("2_37tj5")
-metadata/_edit_lock_ = true
-
-[node name="collisionLight" type="CollisionShape2D" parent="sierra1/AreaLight" unique_id=1436448871]
-position = Vector2(-7, 17)
-shape = SubResource("CircleShape2D_uslt4")
-
 [node name="areaKill" type="Area2D" parent="sierra1" unique_id=1438329073]
 collision_layer = 16
 collision_mask = 32
@@ -1533,19 +1520,6 @@ script = ExtResource("5_27qiv")
 
 [node name="collisionWall" type="CollisionShape2D" parent="sierra2" unique_id=76199630]
 position = Vector2(-6, 17)
-shape = SubResource("CircleShape2D_uslt4")
-
-[node name="AreaLight" type="Area2D" parent="sierra2" unique_id=1906185109]
-light_mask = 4
-visibility_layer = 2
-position = Vector2(1, 0)
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("2_37tj5")
-metadata/_edit_lock_ = true
-
-[node name="collisionLight" type="CollisionShape2D" parent="sierra2/AreaLight" unique_id=1940091154]
-position = Vector2(-7, 17)
 shape = SubResource("CircleShape2D_uslt4")
 
 [node name="areaKill" type="Area2D" parent="sierra2" unique_id=1321427109]
