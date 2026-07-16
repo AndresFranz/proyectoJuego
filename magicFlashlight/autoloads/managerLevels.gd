@@ -1,7 +1,7 @@
 extends Node
 
 @export var main_menu_scene: PackedScene
-#@export var credits_scene: PackedScene
+@export var credits_scene: PackedScene
 @export var Levels: Array[PackedScene]
 @export var menu_next: PackedScene
 
@@ -35,8 +35,7 @@ func main_menu() -> void:
 	get_tree().change_scene_to_packed(main_menu_scene)
 
 func credits() -> void:
-	pass
-	#get_tree().change_scene_to_packed(credits_scene)
+	get_tree().change_scene_to_packed(credits_scene)
 	
 func save_game() -> void:
 	var dict: Dictionary = {"current_level":  current_level}

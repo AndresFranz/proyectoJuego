@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://bur35ngh18yr2"]
+
+[ext_resource type="VideoStream" uid="uid://bwk1x4go8mbi7" path="res://assets/video fondo/panrtalla_creditos.ogv" id="1_cfanq"]
+[ext_resource type="Script" uid="uid://dkwilrn2gtf10" path="res://UI/creditos/creditos.gd" id="1_thuf1"]
+
+[node name="Creditos" type="Control" unique_id=1979284943]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_thuf1")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=358336657]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+stream = ExtResource("1_cfanq")
+volume_db = -80.0
+autoplay = true
+expand = true
+loop = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1855800187]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 119.0
+offset_right = 869.0
+offset_bottom = 494.0
+bbcode_enabled = true
+text = "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[center][rainbow][wave][font_size=50]CREDITOS[/font_size][/wave][/rainbow][/center]
+
+[center]Fonts[/center]
+
+DUNGEON.mode
+by datagoblin
+
+[center]TileSet[/center]
+
+Pixel Fantasy Caves
+by szadiart
+
+[center]Player[/center]
+
+Hooded Figure Character Pack
+by FartFish
+
+[center]Sprites[/center]
+
+500+ Deadly traps + batch color replacer software
+by rehandev
+
+Flashlight 2d Pixel Sprite
+by Voopixel
+
+[center]Videos[/center]
+
+Gemini
+
+[center]Music[/center]
+
+8 Bit Dungeon
+by Kaden_Cook
+
+Cave temple - atmo orchestral drone thriller
+by szegvaria
+
+[center]Sound Efect[/center]
+
+sierra
+by ceton
+
+pendulo
+by DRAGON-STUDIO
+
+saltar
+by Phoenix_Connection_Brazil
+
+correr
+by BlenderTimer
+
+linterna
+by freesound_community
+
+ganar
+by Chequered Ink
+
+puerta
+by Chequered Ink
+
+morir
+by Stepir44
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
