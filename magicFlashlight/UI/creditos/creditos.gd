@@ -14,5 +14,6 @@ func _process(delta: float) -> void:
 		var scroll_bar: VScrollBar = rich_text_label.get_v_scroll_bar()
 		scroll_bar.value += delta*speed
 		if scroll_bar.value == last_value:
+			get_tree().paused = !get_tree().paused
 			LevelManager.main_menu()
 		last_value = scroll_bar.value

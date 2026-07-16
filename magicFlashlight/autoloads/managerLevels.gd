@@ -32,6 +32,7 @@ func next_level() -> void:
 		pass
 
 func main_menu() -> void:
+	get_tree().paused = !get_tree().paused
 	get_tree().change_scene_to_packed(main_menu_scene)
 
 func credits() -> void:
