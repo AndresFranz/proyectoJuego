@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://c7l2fgokxyqqf" path="res://Blocks/LightBlock/block_light.gd" id="4_g72er"]
 [ext_resource type="Script" uid="uid://mnheg7djnl0y" path="res://Blocks/LightBlock/area_light.gd" id="5_4jqkb"]
 [ext_resource type="Script" uid="uid://2iw6mx0i5bxu" path="res://components/hitbox.gd" id="6_f12a1"]
+[ext_resource type="Script" uid="uid://b51lxbci6r213" path="res://Elements/banderin_checkpoint.gd" id="7_f12a1"]
+[ext_resource type="Texture2D" uid="uid://b61bc2quglv6d" path="res://niveles/banderin_checkpoint.png" id="8_rdard"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rdard"]
 b = Vector2(48, 0)
@@ -21,6 +23,9 @@ size = Vector2(32, 128)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g72er"]
 b = Vector2(528, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0r68d"]
+size = Vector2(51, 99)
 
 [node name="level2" type="Node2D" unique_id=585182787]
 
@@ -693,3 +698,66 @@ metadata/_edit_lock_ = true
 [node name="collisionKill" type="CollisionShape2D" parent="bajada8/areaKill" unique_id=97206326]
 position = Vector2(2452, -250)
 shape = SubResource("SegmentShape2D_rdard")
+
+[node name="checkpoint1" type="Area2D" parent="." unique_id=581662664 node_paths=PackedStringArray("marker_2d")]
+position = Vector2(490, 338)
+script = ExtResource("7_f12a1")
+marker_2d = NodePath("Marker2D")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="checkpoint1" unique_id=639366371]
+position = Vector2(2, 9.536743e-07)
+scale = Vector2(0.15625003, 0.18593758)
+texture = ExtResource("8_rdard")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint1" unique_id=1068000323]
+position = Vector2(-2.5, -20.5)
+shape = SubResource("RectangleShape2D_0r68d")
+metadata/_edit_lock_ = true
+
+[node name="Marker2D" type="Marker2D" parent="checkpoint1" unique_id=801414190]
+position = Vector2(1, -7)
+metadata/_edit_lock_ = true
+
+[node name="checkpoint2" type="Area2D" parent="." unique_id=1061383456 node_paths=PackedStringArray("marker_2d")]
+position = Vector2(2295, 337)
+script = ExtResource("7_f12a1")
+marker_2d = NodePath("Marker2D")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="checkpoint2" unique_id=1609772392]
+position = Vector2(2, 9.536743e-07)
+scale = Vector2(0.15625003, 0.18593758)
+texture = ExtResource("8_rdard")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint2" unique_id=849296089]
+position = Vector2(-2.5, -20.5)
+shape = SubResource("RectangleShape2D_0r68d")
+metadata/_edit_lock_ = true
+
+[node name="Marker2D" type="Marker2D" parent="checkpoint2" unique_id=1640130920]
+position = Vector2(1, -7)
+metadata/_edit_lock_ = true
+
+[node name="checkpoint3" type="Area2D" parent="." unique_id=1984992456 node_paths=PackedStringArray("marker_2d")]
+position = Vector2(4062, 529)
+script = ExtResource("7_f12a1")
+marker_2d = NodePath("Marker2D")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="checkpoint3" unique_id=1940074006]
+position = Vector2(2, 9.536743e-07)
+scale = Vector2(0.15625003, 0.18593758)
+texture = ExtResource("8_rdard")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint3" unique_id=479079013]
+position = Vector2(-2.5, -20.5)
+shape = SubResource("RectangleShape2D_0r68d")
+metadata/_edit_lock_ = true
+
+[node name="Marker2D" type="Marker2D" parent="checkpoint3" unique_id=1833561059]
+position = Vector2(1, -7)
+metadata/_edit_lock_ = true

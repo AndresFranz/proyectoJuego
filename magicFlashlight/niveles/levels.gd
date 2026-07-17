@@ -1,4 +1,4 @@
-extends Node2D  # O Node2D / Node3D, dependiendo de tu juego
+extends Node2D
 
 # Cambia "MenuPausa" por el nombre exacto de tu nodo de menú en la escena
 @onready var menu_pause: Control = $menu/menu_pause

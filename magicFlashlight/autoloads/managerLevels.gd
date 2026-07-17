@@ -6,11 +6,19 @@ extends Node
 @export var menu_next: PackedScene
 
 var current_level
+var checkpointX
+var checkpointY
+var positions_start: Dictionary = {
+0: Vector2(107,-68), 
+1: Vector2(-354,597)
+#2: Vector2(0,0)
+} # nivel : posicion inicial
 
 func start_new() -> void:
-	var dict: Dictionary = {"current_level":  0}
+	var dict: Dictionary = {"current_level":  0, "checkpointX" : null,  "checkpointY" : null}
 	var actual_info = JSON.stringify(dict)
-	var file = FileAccess.open_encrypted_with_pass("user://save.data", FileAccess.WRITE, "1234")
+	#var file = FileAccess.open_encrypted_with_pass("user://save.data", FileAccess.WRITE, "1234")
+	var file = FileAccess.open("user://save.data", FileAccess.WRITE)
 	file.store_string(actual_info)
 	file.close()
 	load_game()
@@ -24,6 +32,8 @@ func back_to_main() -> void:
 
 func next_level() -> void:
 	current_level += 1
+	checkpointX = null
+	checkpointY = null
 	get_tree().paused = !get_tree().paused
 	if current_level < Levels.size():
 		get_tree().change_scene_to_packed(Levels[current_level])
@@ -39,26 +49,32 @@ func credits() -> void:
 	#get_tree().change_scene_to_packed(credits_scene)
 	
 func save_game() -> void:
-	var dict: Dictionary = {"current_level":  current_level}
+	var dict: Dictionary = {"current_level":  current_level, "checkpointX" : checkpointX, "checkpointY" : checkpointY}
 	var actual_info = JSON.stringify(dict)
-	var file = FileAccess.open_encrypted_with_pass("user://save.data", FileAccess.WRITE, "1234") # cambiar esto despues xd
+	#var file = FileAccess.open_encrypted_with_pass("user://save.data", FileAccess.WRITE, "1234") # cambiar esto despues xd
+	var file = FileAccess.open("user://save.data", FileAccess.WRITE) # cambiar esto despues xd
 	file.store_string(actual_info)
 	file.close()
 	
 func load_game() -> void:
 	if not FileAccess.file_exists("user://save.data"):
 		return
-	
-	var file = FileAccess.open_encrypted_with_pass("user://save.data", FileAccess.READ, "1234")
+	#var file = FileAccess.open_encrypted_with_pass("user://save.data", FileAccess.READ, "1234")
+	var file = FileAccess.open("user://save.data", FileAccess.READ)
 	if file == null:
 		return
-	
 	var load_dict = JSON.parse_string(file.get_as_text())
 	file.close()
 	
 	if load_dict == null:
 		return
-	if load_dict.current_level is float:
-		current_level = load_dict.current_level
-		if not Levels.is_empty() and current_level < Levels.size():
-			get_tree().change_scene_to_packed(Levels[current_level])
+	print(load_dict)
+	current_level = load_dict.current_level
+	checkpointX = load_dict.checkpointX
+	checkpointY = load_dict.checkpointY
+	
+	if not Levels.is_empty() and current_level < Levels.size():
+		get_tree().change_scene_to_packed(Levels[current_level])
+	print("valor de nivel actual: %s" % load_dict.current_level)
+	print("valor de checkpoint actual: %s" % load_dict.checkpointX, load_dict.checkpointY)
+	print("valor del tipo de checkpoint actual: ", load_dict.checkpointX, load_dict.checkpointY)

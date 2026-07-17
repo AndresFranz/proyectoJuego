@@ -9,12 +9,21 @@ extends CharacterBody2D
 @onready var jump_sound: AudioStreamPlayer2D = $jump_sound
 @onready var die_sound: AudioStreamPlayer2D = $die_sound
 
-@export var SPEED = 180.0
-@export var JUMP_SPEED = 300.0
-
+var SPEED = 180.0
+var JUMP_SPEED = 300.0
 
 var is_dead := false
 var has_won := false
+
+func _ready() -> void:
+	if LevelManager.checkpointX == null or LevelManager.checkpointY == null:
+		var spawn_coor = LevelManager.positions_start[int(LevelManager.current_level)]
+		global_position = spawn_coor
+	elif LevelManager.checkpointX != null and LevelManager.checkpointY != null:
+		#print("debug error feo:", LevelManager.checkpoint)
+		global_position.x = LevelManager.checkpointX
+		global_position.y = LevelManager.checkpointY
+	return
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -99,3 +108,9 @@ func win_dance() -> void:
 
 	velocity = Vector2.ZERO
 	playback.travel("win")
+	
+func marker_checkpoint(checkpoint_position : Vector2) -> void:
+	LevelManager.checkpointX = checkpoint_position[0]
+	LevelManager.checkpointY = checkpoint_position[1]
+	return
+	
