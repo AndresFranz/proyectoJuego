@@ -33,6 +33,12 @@ normal = Vector2(-1, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsc1l"]
 size = Vector2(69, 92)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f12a1"]
+size = Vector2(865.75, 13.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdard"]
+size = Vector2(865.75, 2)
+
 [node name="level2" type="Node2D" unique_id=585182787]
 
 [node name="fondo" type="TileMapLayer" parent="." unique_id=480017077]
@@ -786,3 +792,54 @@ metadata/_edit_lock_ = true
 position = Vector2(-3.5, -29)
 shape = SubResource("RectangleShape2D_jsc1l")
 metadata/_edit_lock_ = true
+
+[node name="puas" type="Area2D" parent="." unique_id=474619685]
+position = Vector2(-622, 204)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puas" unique_id=297198578]
+position = Vector2(2398, 427)
+shape = SubResource("RectangleShape2D_f12a1")
+
+[node name="areaKill" type="Area2D" parent="puas" unique_id=930634884]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("6_f12a1")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puas/areaKill" unique_id=1538835362]
+position = Vector2(2397, 417)
+shape = SubResource("RectangleShape2D_rdard")
+
+[node name="puas2" type="Area2D" parent="." unique_id=1181213638]
+position = Vector2(1185, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puas2" unique_id=1955947414]
+position = Vector2(2398, 427)
+shape = SubResource("RectangleShape2D_f12a1")
+
+[node name="areaKill" type="Area2D" parent="puas2" unique_id=656219958]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("6_f12a1")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puas2/areaKill" unique_id=1377308974]
+position = Vector2(2397, 417)
+shape = SubResource("RectangleShape2D_rdard")
+
+[node name="puas3" type="Area2D" parent="." unique_id=1775702982]
+position = Vector2(2479, 236)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puas3" unique_id=312411692]
+position = Vector2(2398, 427)
+shape = SubResource("RectangleShape2D_f12a1")
+
+[node name="areaKill" type="Area2D" parent="puas3" unique_id=1158625647]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("6_f12a1")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puas3/areaKill" unique_id=1446858602]
+position = Vector2(2397, 417)
+shape = SubResource("RectangleShape2D_rdard")

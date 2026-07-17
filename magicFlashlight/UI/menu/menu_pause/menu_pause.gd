@@ -33,5 +33,4 @@ func _on_credits_pressed() -> void:
 func _on_save_pressed() -> void:
 	visible = false
 	LevelManager.save_game()
-	print("juego guardado")
 	self._on_resume_pressed()

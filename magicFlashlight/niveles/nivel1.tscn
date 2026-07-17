@@ -33,7 +33,7 @@ collision_mask = 5
 metadata/_edit_lock_ = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
-color = Color(0.89059, 0.89059, 0.8905901, 1)
+color = Color(0.16862746, 0.16862746, 0.16862746, 1)
 
 [node name="menu" type="CanvasLayer" parent="." unique_id=1761207640]
 
@@ -52,21 +52,18 @@ autoplay = true
 [node name="LetreroTutorial1" type="Node2D" parent="." unique_id=1936056524]
 light_mask = 2
 position = Vector2(109, -136)
-metadata/_edit_lock_ = true
 
 [node name="TablaHorizontal" type="Sprite2D" parent="LetreroTutorial1" unique_id=1951330805]
 light_mask = 2
-position = Vector2(10, -1.9999975)
-scale = Vector2(0.46875003, 0.37499994)
+position = Vector2(22.499996, -1.9999975)
+scale = Vector2(0.546875, 0.37499994)
 texture = ExtResource("8_rml80")
-metadata/_edit_lock_ = true
 
 [node name="PointLight2D" type="PointLight2D" parent="LetreroTutorial1" unique_id=1995339053]
 light_mask = 2
 scale = Vector2(1.1835938, 0.36328125)
 range_item_cull_mask = 2
 texture = ExtResource("9_cmcqe")
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="LetreroTutorial1" unique_id=1832667044]
 light_mask = 2
@@ -76,9 +73,8 @@ offset_right = 53.0
 offset_bottom = 14.0
 theme_override_font_sizes/font_size = 9
 text = "Encender/Apagar 
-con tecla Q"
+con Click Izquierdo"
 horizontal_alignment = 1
-metadata/_edit_lock_ = true
 
 [node name="LetreroTutorial2" type="Node2D" parent="." unique_id=1706925999]
 light_mask = 2
@@ -161,7 +157,6 @@ position = Vector2(67.000015, 23.000004)
 scale = Vector2(1.6250002, 0.23046874)
 range_item_cull_mask = 2
 texture = ExtResource("9_cmcqe")
-metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="LetreroTutorial4" unique_id=234955445]
 light_mask = 2
@@ -186,7 +181,6 @@ light_mask = 2
 position = Vector2(560, -199.49997)
 scale = Vector2(0.61250013, 0.52678585)
 texture = ExtResource("8_rml80")
-metadata/_edit_lock_ = true
 
 [node name="PointLight2D" type="PointLight2D" parent="LetreroTutorial5" unique_id=351495168]
 light_mask = 2
@@ -205,10 +199,9 @@ offset_bottom = -181.0
 theme_override_font_sizes/font_size = 9
 text = "Cuidado!
 Los pendulos y sierras
-siempre danan"
+siempre dañan"
 horizontal_alignment = 1
 vertical_alignment = 1
-metadata/_edit_lock_ = true
 
 [node name="LetreroTutorial6" type="Node2D" parent="." unique_id=1879275454]
 light_mask = 2

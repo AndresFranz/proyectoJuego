@@ -21,7 +21,6 @@ position = Vector2(-354, 597)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1139072933]
 color = Color(0.16924527, 0.1692453, 0.16924527, 1)
-metadata/_edit_lock_ = true
 
 [node name="menu" type="CanvasLayer" parent="." unique_id=399441484]
 

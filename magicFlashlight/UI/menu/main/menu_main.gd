@@ -28,24 +28,20 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
-	print("mostrar post-menu")
 	menu_principal.visible = false
 	menu_post_main.visible = true
 
 
 func _on_back_pressed() -> void:
-	print("volver al menu principal")
 	menu_post_main.visible = false
 	menu_principal.visible = true
 
 
 func _on_load_pressed() -> void:
-	print("cargar partida")
 	LevelManager.load_game()
 
 
 func _on_new_pressed() -> void:
-	print("nueva partida")
 	LevelManager.start_new()
 
 
