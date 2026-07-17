@@ -47,16 +47,16 @@ tile_set = ExtResource("3_8a7ie")
 metadata/_edit_lock_ = true
 
 [node name="Sierra" parent="." unique_id=1269812321 instance=ExtResource("2_w2pp4")]
-position = Vector2(2876, 354)
+position = Vector2(2876, 369)
 metadata/_edit_lock_ = true
 
 [node name="Sierra2" parent="." unique_id=1211289481 instance=ExtResource("2_w2pp4")]
-position = Vector2(2716, 333)
+position = Vector2(2716, 320)
 rotation = -3.1415925
 metadata/_edit_lock_ = true
 
 [node name="Sierra3" parent="." unique_id=1114654207 instance=ExtResource("2_w2pp4")]
-position = Vector2(2594, 354)
+position = Vector2(2594, 369)
 metadata/_edit_lock_ = true
 
 [node name="Sierra4" parent="." unique_id=1239916208 instance=ExtResource("2_w2pp4")]

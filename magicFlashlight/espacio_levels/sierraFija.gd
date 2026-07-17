@@ -7,4 +7,5 @@ func _ready() -> void:
 		sound.play()
 
 func _process(delta: float) -> void:
-	pass
+	rotation += 2.0 * delta
+	rotation = wrapf(rotation, 0.0, TAU)
