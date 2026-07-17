@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="9_cmcqe"]
 [ext_resource type="Texture2D" uid="uid://b61bc2quglv6d" path="res://niveles/banderin_checkpoint.png" id="10_u8hoo"]
 [ext_resource type="Script" uid="uid://jqbkwaquanaa" path="res://Elements/checkpointScript.gd" id="11_mncda"]
+[ext_resource type="AudioStream" uid="uid://bvke1iudjnh5f" path="res://Music_&_SFX/checkpoint.mp3" id="12_mncda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsc1l"]
 size = Vector2(69, 92)
@@ -254,6 +255,10 @@ position = Vector2(-3.5, -29)
 shape = SubResource("RectangleShape2D_jsc1l")
 metadata/_edit_lock_ = true
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CheckpointEscena/AreaCheckpoint" unique_id=389437864]
+stream = ExtResource("12_mncda")
+volume_db = -20.0
+
 [node name="CheckpointEscena2" type="Node2D" parent="." unique_id=1767821839]
 position = Vector2(2805, -144)
 metadata/_edit_lock_ = true
@@ -271,3 +276,7 @@ metadata/_edit_lock_ = true
 position = Vector2(-3.5, -29)
 shape = SubResource("RectangleShape2D_jsc1l")
 metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CheckpointEscena2/AreaCheckpoint" unique_id=1313506263]
+stream = ExtResource("12_mncda")
+volume_db = -20.0
