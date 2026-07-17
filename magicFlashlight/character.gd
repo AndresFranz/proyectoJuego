@@ -111,4 +111,5 @@ func win_dance() -> void:
 func new_checkpoint(new_position: Vector2) -> void:
 	LevelManager.checkpointX = new_position[0]
 	LevelManager.checkpointY = new_position[1]
+	LevelManager.save_game()
 	return 

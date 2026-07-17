@@ -33,6 +33,7 @@ func next_level() -> void:
 	current_level += 1
 	checkpointX = null
 	checkpointY = null
+	save_game()
 	get_tree().paused = !get_tree().paused
 	if current_level < Levels.size():
 		get_tree().change_scene_to_packed(Levels[current_level])
