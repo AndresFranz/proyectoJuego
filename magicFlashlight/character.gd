@@ -16,6 +16,14 @@ extends CharacterBody2D
 var is_dead := false
 var has_won := false
 
+
+func _ready() -> void:
+	if LevelManager.checkpointX == null or LevelManager.checkpointY == null:
+		global_position = LevelManager.start_positions[int(LevelManager.current_level)]
+	else:
+		global_position = Vector2(float(LevelManager.checkpointX),float(LevelManager.checkpointY))
+	return
+
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
@@ -99,3 +107,8 @@ func win_dance() -> void:
 
 	velocity = Vector2.ZERO
 	playback.travel("win")
+	
+func new_checkpoint(new_position: Vector2) -> void:
+	LevelManager.checkpointX = new_position[0]
+	LevelManager.checkpointY = new_position[1]
+	return 
