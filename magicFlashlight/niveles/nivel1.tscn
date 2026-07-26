@@ -1,0 +1,282 @@
+[gd_scene format=3 uid="uid://21vebp4tn71x"]
+
+[ext_resource type="Script" uid="uid://c0mvoc68cx5tl" path="res://niveles/levels.gd" id="1_h7kka"]
+[ext_resource type="PackedScene" uid="uid://nbhryltmisfi" path="res://espacio_levels/level1.tscn" id="1_rd7nm"]
+[ext_resource type="PackedScene" uid="uid://ifuqbbjqot2b" path="res://Elements/puerta.tscn" id="3_p6c0m"]
+[ext_resource type="PackedScene" uid="uid://djfcyfi7a5yn0" path="res://character.tscn" id="7_h7kka"]
+[ext_resource type="PackedScene" uid="uid://bansknjvy3ays" path="res://UI/menu/menu_pause/menu_pause.tscn" id="7_p6c0m"]
+[ext_resource type="AudioStream" uid="uid://0v2dpbxtengo" path="res://Music_&_SFX/szegvaria-cave-temple-atmo-orchestral-drone-thriller-9357.mp3" id="7_rml80"]
+[ext_resource type="PackedScene" uid="uid://ctj0r4wrld2q7" path="res://UI/menu/menu_finished/menu_finished.tscn" id="8_cmcqe"]
+[ext_resource type="Texture2D" uid="uid://dccptrxadpwry" path="res://niveles/tabla_horizontal.png" id="8_rml80"]
+[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="9_cmcqe"]
+[ext_resource type="Texture2D" uid="uid://b61bc2quglv6d" path="res://niveles/banderin_checkpoint.png" id="10_u8hoo"]
+[ext_resource type="Script" uid="uid://jqbkwaquanaa" path="res://Elements/checkpointScript.gd" id="11_mncda"]
+[ext_resource type="AudioStream" uid="uid://bvke1iudjnh5f" path="res://Music_&_SFX/checkpoint.mp3" id="12_mncda"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsc1l"]
+size = Vector2(69, 92)
+
+[node name="Nivel1" type="Node2D" unique_id=527181951]
+script = ExtResource("1_h7kka")
+
+[node name="Level1" parent="." unique_id=891566079 instance=ExtResource("1_rd7nm")]
+position = Vector2(50, -3)
+metadata/_edit_lock_ = true
+
+[node name="puerta" parent="." unique_id=211982980 node_paths=PackedStringArray("menu_finalizacion") instance=ExtResource("3_p6c0m")]
+position = Vector2(4388, -279)
+menu_finalizacion = NodePath("../menu/MenuFinished")
+metadata/_edit_lock_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1123804377]
+color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+
+[node name="menu" type="CanvasLayer" parent="." unique_id=1761207640]
+
+[node name="menu_pause" parent="menu" unique_id=1026010211 instance=ExtResource("7_p6c0m")]
+visible = false
+
+[node name="MenuFinished" parent="menu" unique_id=1048915644 instance=ExtResource("8_cmcqe")]
+process_mode = 2
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1838143223]
+stream = ExtResource("7_rml80")
+volume_db = -15.0
+autoplay = true
+
+[node name="LetreroTutorial1" type="Node2D" parent="." unique_id=1936056524]
+light_mask = 2
+position = Vector2(109, -136)
+
+[node name="TablaHorizontal" type="Sprite2D" parent="LetreroTutorial1" unique_id=1951330805]
+light_mask = 2
+position = Vector2(22.499996, -1.9999975)
+scale = Vector2(0.546875, 0.37499994)
+texture = ExtResource("8_rml80")
+
+[node name="PointLight2D" type="PointLight2D" parent="LetreroTutorial1" unique_id=1995339053]
+light_mask = 2
+scale = Vector2(1.1835938, 0.36328125)
+range_item_cull_mask = 2
+texture = ExtResource("9_cmcqe")
+
+[node name="Label" type="Label" parent="LetreroTutorial1" unique_id=1832667044]
+light_mask = 2
+offset_left = -54.0
+offset_top = -16.0
+offset_right = 53.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 9
+text = "Encender/Apagar 
+con Click Izquierdo"
+horizontal_alignment = 1
+
+[node name="LetreroTutorial2" type="Node2D" parent="." unique_id=1706925999]
+light_mask = 2
+position = Vector2(419, -124)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="LetreroTutorial2" unique_id=994775033]
+light_mask = 2
+position = Vector2(3, -3.4999976)
+scale = Vector2(0.475, 0.34821424)
+texture = ExtResource("8_rml80")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="LetreroTutorial2" unique_id=938331383]
+light_mask = 2
+scale = Vector2(1.1835938, 0.36328125)
+range_item_cull_mask = 2
+texture = ExtResource("9_cmcqe")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LetreroTutorial2" unique_id=505237858]
+light_mask = 2
+offset_left = -62.0
+offset_top = -16.0
+offset_right = 56.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 7
+text = "Apaga la linterna
+ para atravesar pared"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="LetreroTutorial3" type="Node2D" parent="." unique_id=306206339]
+light_mask = 2
+position = Vector2(299, -87)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="LetreroTutorial3" unique_id=1751173011]
+light_mask = 2
+position = Vector2(-27.999989, 18.250004)
+scale = Vector2(0.14375001, 0.18303567)
+texture = ExtResource("8_rml80")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="LetreroTutorial3" unique_id=1597626765]
+light_mask = 2
+position = Vector2(-38.625008, 17.5)
+scale = Vector2(0.5966797, 0.20703124)
+range_item_cull_mask = 2
+texture = ExtResource("9_cmcqe")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LetreroTutorial3" unique_id=685034323]
+light_mask = 2
+offset_left = -51.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 13
+text = "-->"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="LetreroTutorial4" type="Node2D" parent="." unique_id=321453550]
+light_mask = 2
+position = Vector2(945, -153)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="LetreroTutorial4" unique_id=1032172057]
+light_mask = 2
+position = Vector2(67.00001, 23.499994)
+scale = Vector2(0.7687502, 0.3303572)
+texture = ExtResource("8_rml80")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="LetreroTutorial4" unique_id=1564054047]
+light_mask = 2
+position = Vector2(67.000015, 23.000004)
+scale = Vector2(1.6250002, 0.23046874)
+range_item_cull_mask = 2
+texture = ExtResource("9_cmcqe")
+
+[node name="Label" type="Label" parent="LetreroTutorial4" unique_id=234955445]
+light_mask = 2
+offset_left = -51.259033
+offset_top = 8.0
+offset_right = 60.740967
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 9
+text = "Apunta a la escalera
+ con la linterna para subir"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="LetreroTutorial5" type="Node2D" parent="." unique_id=1579574060]
+light_mask = 2
+position = Vector2(945, -153)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="LetreroTutorial5" unique_id=1466922327]
+light_mask = 2
+position = Vector2(560, -199.49997)
+scale = Vector2(0.61250013, 0.52678585)
+texture = ExtResource("8_rml80")
+
+[node name="PointLight2D" type="PointLight2D" parent="LetreroTutorial5" unique_id=351495168]
+light_mask = 2
+position = Vector2(563.00006, -199)
+scale = Vector2(1.2890626, 0.40234372)
+range_item_cull_mask = 2
+texture = ExtResource("9_cmcqe")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LetreroTutorial5" unique_id=808285847]
+light_mask = 2
+offset_left = 468.0
+offset_top = -226.0
+offset_right = 608.0
+offset_bottom = -181.0
+theme_override_font_sizes/font_size = 9
+text = "Cuidado!
+Los pendulos y sierras
+siempre dañan"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LetreroTutorial6" type="Node2D" parent="." unique_id=1879275454]
+light_mask = 2
+position = Vector2(1399, -174)
+metadata/_edit_lock_ = true
+
+[node name="TablaHorizontal" type="Sprite2D" parent="LetreroTutorial6" unique_id=1957119963]
+light_mask = 2
+position = Vector2(575.5001, -199.49997)
+scale = Vector2(0.76562524, 0.52678585)
+texture = ExtResource("8_rml80")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="LetreroTutorial6" unique_id=1933782159]
+light_mask = 2
+position = Vector2(581, -201)
+scale = Vector2(1.5585942, 0.51953125)
+range_item_cull_mask = 2
+texture = ExtResource("9_cmcqe")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LetreroTutorial6" unique_id=1820693996]
+light_mask = 2
+offset_left = 468.0
+offset_top = -224.0
+offset_right = 648.0
+offset_bottom = -179.0
+theme_override_font_sizes/font_size = 9
+text = "Apunta sobre la plataforma
+para avanzar"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="CheckpointEscena" type="Node2D" parent="." unique_id=16542662]
+position = Vector2(1627, -321)
+metadata/_edit_lock_ = true
+
+[node name="BanderinCheckpoint" type="Sprite2D" parent="CheckpointEscena" unique_id=488434841]
+scale = Vector2(0.13942307, 0.18750003)
+texture = ExtResource("10_u8hoo")
+metadata/_edit_lock_ = true
+
+[node name="AreaCheckpoint" type="Area2D" parent="CheckpointEscena" unique_id=1573735609]
+script = ExtResource("11_mncda")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointEscena/AreaCheckpoint" unique_id=158116049]
+position = Vector2(-3.5, -29)
+shape = SubResource("RectangleShape2D_jsc1l")
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CheckpointEscena/AreaCheckpoint" unique_id=389437864]
+stream = ExtResource("12_mncda")
+volume_db = -20.0
+
+[node name="CheckpointEscena2" type="Node2D" parent="." unique_id=1767821839]
+position = Vector2(2805, -144)
+metadata/_edit_lock_ = true
+
+[node name="BanderinCheckpoint" type="Sprite2D" parent="CheckpointEscena2" unique_id=1262862873]
+scale = Vector2(0.13942307, 0.18750003)
+texture = ExtResource("10_u8hoo")
+metadata/_edit_lock_ = true
+
+[node name="AreaCheckpoint" type="Area2D" parent="CheckpointEscena2" unique_id=1944458962]
+script = ExtResource("11_mncda")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckpointEscena2/AreaCheckpoint" unique_id=110648095]
+position = Vector2(-3.5, -29)
+shape = SubResource("RectangleShape2D_jsc1l")
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CheckpointEscena2/AreaCheckpoint" unique_id=1313506263]
+stream = ExtResource("12_mncda")
+volume_db = -20.0
+
+[node name="Character" parent="." unique_id=865322138 instance=ExtResource("7_h7kka")]
+position = Vector2(107, -68)
+collision_mask = 5
+metadata/_edit_lock_ = true

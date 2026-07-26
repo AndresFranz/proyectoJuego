@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxvo4rq4w56uj"
+path="res://.godot/imported/ceton-saw-164081 (mp3cut.net).mp3-381e34bf40cf27c6fe97b224d9378b32.mp3str"
+
+[deps]
+
+source_file="res://Music_&_SFX/ceton-saw-164081 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/ceton-saw-164081 (mp3cut.net).mp3-381e34bf40cf27c6fe97b224d9378b32.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

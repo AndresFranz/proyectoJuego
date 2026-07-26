@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ctj0r4wrld2q7"]
+
+[ext_resource type="Script" uid="uid://c6lss30swtrt7" path="res://UI/menu/menu_finished/menu_finished.gd" id="1_6pstj"]
+[ext_resource type="AudioStream" uid="uid://db04g0u0uq2se" path="res://Music_&_SFX/music_box_mystery.wav" id="2_2kx33"]
+
+[node name="MenuPostMain" type="Control" unique_id=1048915644]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6pstj")
+
+[node name="Panel" type="Panel" parent="." unique_id=786980142]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 118.0
+offset_right = 850.0
+offset_bottom = 465.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1934509027]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 117.0
+offset_right = 453.0
+offset_bottom = 509.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1571761892]
+layout_mode = 2
+
+[node name="next" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=896008493]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "NEXT LEVEL"
+
+[node name="replay" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=948732250]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "REPLAY"
+
+[node name="save" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=1745511757]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "SAVE"
+
+[node name="menu" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=2116356084]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "MENU"
+
+[node name="credits" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=230343692]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8617255, 0.724087, 0, 1)
+theme_override_font_sizes/font_size = 33
+text = "CREDITS"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=411886204]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 43.0
+offset_right = 343.0
+offset_bottom = 83.0
+theme_override_colors/default_color = Color(0.1284591, 0.12568131, 1, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "WINNER"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2082522121]
+stream = ExtResource("2_2kx33")
+autoplay = true

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://clmrs3an4xda6"]
+
+[ext_resource type="Script" uid="uid://ck5qvuh76y62m" path="res://flashlight/linternaScript.gd" id="1_jlm58"]
+[ext_resource type="Texture2D" uid="uid://ceuiucfg4d2dv" path="res://assets/Flashlight.png" id="2_rksnn"]
+[ext_resource type="Texture2D" uid="uid://caaol3i4ceo6o" path="res://niveles/light_cone.png" id="3_rksnn"]
+[ext_resource type="AudioStream" uid="uid://b6nqtuyh6t1wk" path="res://Music_&_SFX/freesound_community-flashlight-clicking-on-105809.mp3" id="4_t2lw8"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rksnn"]
+polygon = PackedVector2Array(12, -10, 12, 9, -2, 0)
+
+[node name="LinternaObject" type="Node2D" unique_id=786015511]
+script = ExtResource("1_jlm58")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1296824987]
+z_index = 1
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_rksnn")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=834511003]
+light_mask = 2
+visibility_layer = 4
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1938941955]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(-12, 0)
+polygon = PackedVector2Array(12, 0, 409, 97, 409, -85)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=57110234]
+position = Vector2(206.92587, 1.2393036e-06)
+rotation = 4.712389
+scale = Vector2(3.7594385, 5.7609015)
+energy = 5.08
+shadow_enabled = true
+shadow_filter = 2
+texture = ExtResource("3_rksnn")
+texture_scale = 0.28
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=2017978186]
+occluder = SubResource("OccluderPolygon2D_rksnn")
+
+[node name="flashlight_sound" type="AudioStreamPlayer2D" parent="." unique_id=1900755471]
+stream = ExtResource("4_t2lw8")
+pitch_scale = 1.5

@@ -8,9 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c3nxvm36mgas0" path="res://assets/hooded figure asset pack/hooded figure asset pack/hurt.png" id="4_0qfo5"]
 [ext_resource type="PackedScene" uid="uid://clmrs3an4xda6" path="res://flashlight/FlashLight.tscn" id="7_qi5as"]
 [ext_resource type="Script" uid="uid://bxaush0av8s31" path="res://components/heartbox.gd" id="8_jb3kq"]
-[ext_resource type="AudioStream" uid="uid://jvvlsid531at" path="res://Music_&_SFX/blendertimer-person-running-loop-245173.mp3" id="9_qi5as"]
-[ext_resource type="AudioStream" uid="uid://d2xevqvnd3qb3" path="res://Music_&_SFX/jump.mp3" id="10_jb3kq"]
-[ext_resource type="AudioStream" uid="uid://c1j1g7mwm4ky1" path="res://Music_&_SFX/stepir44-hurt-sound-435314.mp3" id="11_c1b4b"]
+[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="9_c1b4b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vu45j"]
 radius = 11.0
@@ -53,30 +51,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Pivote/Sprite2D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Pivote/Sprite2D:scale")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(4, 4)]
 }
 
 [sub_resource type="Animation" id="Animation_0qfo5"]
@@ -163,7 +137,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_pjt0s"]
 resource_name = "idle"
-length = 0.8
+length = 0.6
 loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
@@ -197,7 +171,7 @@ tracks/2/path = NodePath("Pivote/Sprite2D:frame")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2791, 0.5511),
+"times": PackedFloat32Array(0, 0.2305, 0.4727),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [0, 2, 3]
@@ -286,72 +260,6 @@ tracks/2/keys = {
 "values": [0, 1, 2, 3, 4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_qi5as"]
-resource_name = "win"
-length = 1.6
-loop_mode = 1
-step = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Pivote/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_glpr6")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Pivote/Sprite2D:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Pivote/Sprite2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(2, 0), Vector2(4, 0), Vector2(6, 0), Vector2(6, 0), Vector2(4, 0), Vector2(2, 0), Vector2(0, 0)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Pivote/Sprite2D:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2(4, 4), Vector2(4, 4), Vector2(4, 4), Vector2(4, 4), Vector2(-4, 4), Vector2(-4, 4), Vector2(-4, 4), Vector2(-4, 4)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Pivote/Sprite2D:frame")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 0, 1, 2, 3]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wa5vi"]
 _data = {
 &"RESET": SubResource("Animation_glpr6"),
@@ -359,15 +267,11 @@ _data = {
 &"hurt": SubResource("Animation_yxww1"),
 &"idle": SubResource("Animation_pjt0s"),
 &"jump": SubResource("Animation_px5sl"),
-&"run": SubResource("Animation_wa5vi"),
-&"win": SubResource("Animation_qi5as")
+&"run": SubResource("Animation_wa5vi")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_px5sl"]
 animation = &"fall"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qi5as"]
-animation = &"hurt"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wa5vi"]
 animation = &"idle"
@@ -377,9 +281,6 @@ animation = &"jump"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wfnr8"]
 animation = &"run"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jb3kq"]
-animation = &"win"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_px5sl"]
 advance_mode = 2
@@ -400,56 +301,27 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bwfjh"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x1sy7"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sm1rv"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jx0ln"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lpiy1"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_88tkl"]
-switch_mode = 2
-advance_mode = 2
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y0ipg"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kjduu"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3d8aq"]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8i6g0"]
-
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_wa5vi"]
 states/Start/position = Vector2(136, 110.576645)
 states/fall/node = SubResource("AnimationNodeAnimation_px5sl")
-states/fall/position = Vector2(532.39996, 50.793983)
-states/hurt/node = SubResource("AnimationNodeAnimation_qi5as")
-states/hurt/position = Vector2(607.27997, -49.39801)
+states/fall/position = Vector2(569.19995, -27.606014)
 states/idle/node = SubResource("AnimationNodeAnimation_wa5vi")
-states/idle/position = Vector2(266.8, 127.776)
+states/idle/position = Vector2(332.4, 124.576004)
 states/jump/node = SubResource("AnimationNodeAnimation_0qfo5")
-states/jump/position = Vector2(347.28, 50.267902)
+states/jump/position = Vector2(344.08, -27.158012)
 states/run/node = SubResource("AnimationNodeAnimation_wfnr8")
 states/run/position = Vector2(607.6, 110.06081)
-states/win/node = SubResource("AnimationNodeAnimation_jb3kq")
-states/win/position = Vector2(480.4, 201.51303)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_px5sl"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_0qfo5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_yxww1"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_wdpcj"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_qi5as"), "fall", "run", SubResource("AnimationNodeStateMachineTransition_jb3kq"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_c1b4b"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_7tnxx"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_bwfjh"), "jump", "hurt", SubResource("AnimationNodeStateMachineTransition_x1sy7"), "idle", "hurt", SubResource("AnimationNodeStateMachineTransition_sm1rv"), "run", "hurt", SubResource("AnimationNodeStateMachineTransition_jx0ln"), "fall", "hurt", SubResource("AnimationNodeStateMachineTransition_lpiy1"), "hurt", "End", SubResource("AnimationNodeStateMachineTransition_88tkl"), "idle", "win", SubResource("AnimationNodeStateMachineTransition_y0ipg"), "run", "win", SubResource("AnimationNodeStateMachineTransition_kjduu"), "jump", "win", SubResource("AnimationNodeStateMachineTransition_3d8aq"), "fall", "win", SubResource("AnimationNodeStateMachineTransition_8i6g0")]
-graph_offset = Vector2(0, -45.97329)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_px5sl"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_0qfo5"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_yxww1"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_wdpcj"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_qi5as"), "fall", "run", SubResource("AnimationNodeStateMachineTransition_jb3kq"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_c1b4b"), "run", "fall", SubResource("AnimationNodeStateMachineTransition_7tnxx"), "run", "jump", SubResource("AnimationNodeStateMachineTransition_bwfjh")]
+graph_offset = Vector2(0, -77.39801)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7tnxx"]
-radius = 18.0
-height = 62.0
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wdpcj"]
-load_path = "res://.godot/imported/light_oval.png-42f56eeb03d526e1f10193605b726a0d.ctex"
+radius = 26.0
+height = 60.0
 
 [node name="Character" type="CharacterBody2D" unique_id=865322138]
-scale = Vector2(0.3, 0.3)
 script = ExtResource("1_wa5vi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=702880591]
-visible = false
 scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_vu45j")
 
@@ -467,39 +339,27 @@ scale = Vector2(4, 4)
 texture = ExtResource("1_glpr6")
 hframes = 4
 
-[node name="heartbox" type="Area2D" parent="." unique_id=597204216]
-visible = false
+[node name="heartbox" type="Area2D" parent="." unique_id=597204216 node_paths=PackedStringArray("character_body_2d")]
 collision_layer = 32
 collision_mask = 16
 script = ExtResource("8_jb3kq")
+character_body_2d = NodePath("")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="heartbox" unique_id=1785918486]
+position = Vector2(-2, 2)
 shape = SubResource("CapsuleShape2D_7tnxx")
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=942629211]
-position = Vector2(120, -65)
-zoom = Vector2(4, 4)
+position = Vector2(139, -65)
+zoom = Vector2(2, 2)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1038583604]
 position = Vector2(-3.0000072, -0.9999962)
 rotation = 1.5707964
-scale = Vector2(0.5, 0.58)
-energy = 1.8
-texture = SubResource("CompressedTexture2D_wdpcj")
+scale = Vector2(0.34189522, 0.39651528)
+energy = 1.49
+texture = ExtResource("9_c1b4b")
 
 [node name="LinternaObject" parent="." unique_id=786015511 instance=ExtResource("7_qi5as")]
-position = Vector2(0, 4)
-
-[node name="run_sound" type="AudioStreamPlayer2D" parent="." unique_id=492878917]
-stream = ExtResource("9_qi5as")
-volume_db = -20.0
-pitch_scale = 0.9
-
-[node name="jump_sound" type="AudioStreamPlayer2D" parent="." unique_id=1740801412]
-stream = ExtResource("10_jb3kq")
-volume_db = -10.0
-
-[node name="die_sound" type="AudioStreamPlayer2D" parent="." unique_id=540698517]
-stream = ExtResource("11_c1b4b")

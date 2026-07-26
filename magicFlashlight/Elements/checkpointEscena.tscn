@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c2xen211uouo4"]
+
+[ext_resource type="Texture2D" uid="uid://b61bc2quglv6d" path="res://niveles/banderin_checkpoint.png" id="1_pbwsg"]
+[ext_resource type="Script" uid="uid://jqbkwaquanaa" path="res://Elements/checkpointScript.gd" id="2_ja0yq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsc1l"]
+size = Vector2(69, 92)
+
+[node name="CheckpointEscena" type="Node2D" unique_id=16542662]
+metadata/_edit_lock_ = true
+
+[node name="BanderinCheckpoint" type="Sprite2D" parent="." unique_id=488434841]
+scale = Vector2(0.13942307, 0.18750003)
+texture = ExtResource("1_pbwsg")
+metadata/_edit_lock_ = true
+
+[node name="AreaCheckpoint" type="Area2D" parent="." unique_id=1573735609]
+script = ExtResource("2_ja0yq")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCheckpoint" unique_id=158116049]
+position = Vector2(-3.5, -29)
+shape = SubResource("RectangleShape2D_jsc1l")

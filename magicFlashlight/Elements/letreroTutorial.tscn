@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bb8jxtldwu6hr"]
+
+[ext_resource type="Texture2D" uid="uid://dccptrxadpwry" path="res://niveles/tabla_horizontal.png" id="1_iberu"]
+[ext_resource type="Texture2D" uid="uid://ddj7ocv4r30a7" path="res://niveles/light_oval.png" id="2_i73d0"]
+
+[node name="LetreroTutorial" type="Node2D" unique_id=1706925999]
+light_mask = 2
+
+[node name="TablaHorizontal" type="Sprite2D" parent="." unique_id=1951330805]
+light_mask = 2
+position = Vector2(1.0000153, 0)
+scale = Vector2(0.3625, 0.3392857)
+texture = ExtResource("1_iberu")
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1995339053]
+light_mask = 2
+scale = Vector2(1.1835938, 0.36328125)
+range_item_cull_mask = 2
+texture = ExtResource("2_i73d0")
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="." unique_id=1832667044]
+light_mask = 2
+offset_left = -54.0
+offset_top = -16.0
+offset_right = 53.0
+offset_bottom = 14.0
+metadata/_edit_lock_ = true

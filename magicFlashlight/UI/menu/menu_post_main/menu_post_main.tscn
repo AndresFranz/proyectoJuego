@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dcpqmoelpxvwo"]
+
+[ext_resource type="Script" uid="uid://1nsdyk2d168q" path="res://UI/menu/menu_post_main/menu_post_main.gd" id="1_snqu7"]
+
+[node name="MenuPostMain" type="Control" unique_id=406316603]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_snqu7")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1311120978]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -99.0
+offset_right = 131.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1815427697]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2087105921]
+layout_mode = 2
+
+[node name="load" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=516099098]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Load"
+
+[node name="new" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1918208766]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "new game"
+
+[node name="back" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=262957973]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "back"

@@ -1,0 +1,16 @@
+Fonts -> DUNGEON.mode by datagoblin
+TileSet -> Pixel Fantasy Caves by szadiart
+obstáculos -> 500+ Deadly traps + batch color replacer software by rehandev
+Linterna -> Flashlight 2d Pixel Sprite by Voopixel
+
+- SFX:
+musica menu -> 8 Bit Dungeon by Kaden_Cook
+musica juego -> Cave temple - atmo orchestral drone thriller by szegvaria
+sierra -> ceton
+pendulo -> DRAGON-STUDIO
+saltar -> Phoenix_Connection_Brazil
+correr -> BlenderTimer
+linterna -> freesound_community
+ganar -> Chequered Ink
+puerta -> Chequered Ink
+morir -> Stepir44
